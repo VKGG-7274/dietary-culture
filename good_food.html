@@ -1,0 +1,485 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="css/top.css">
+        <style>
+          .carousel-inner img{
+            width: 100%;
+            height: 1005;
+          }
+        </style>
+    
+    </head>
+    <body>
+      <div style="width: 100%; height: 50px; background-color: rgb(189, 11, 11); " class="fixed-top"></div>
+    <div class="container">
+        <!-- 导航栏 -->
+        <div class="row navbar navbar-expand-lg  navbar-light fixed-top" id="row">
+            <div class="col-lg-3 bavber-brand">
+                <img src="image/logo1.jpg" class="img-fluid" id="logo">
+            </div>
+            <button class="navbar-toggler" data-target="#my" data-toggle="collapse" style="margin-bottom: 20px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-lg-6 collapse navbar-collapse" id="my">
+                <nav class="nav nav-pills navbar-nav">
+                    <!-- active-点击会变成红色 -->
+                    <a href="index.html" class="nav-item nav-link" id="a">首页</a>
+                    <a href="main display.html" class="nav-item nav-link" id="a">打卡展示</a>
+                    <a href="other display.html" class="nav-item nav-link" id="a">视觉盛宴</a>
+                    <a href="festivals_food.html" class="nav-item nav-link" id="a">节日饮食</a>
+                    <a href="good_food.html" class="nav-item nav-link active" id="a">健康美食</a>
+                    <a href="msglyzs2.html" class="nav-item nav-link" id="a">美食天下</a>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <h2 style="text-align: center; margin-top: 182px;"><i>健康美食制作</i></h2>
+    <hr>
+    <div class="container " style="border: 1px solid;">
+      <a href="image/a.png"> <img src="image/a.png"  width="100%" height="100%"> </a>
+      <div id="demo" class="carousel slide" data-ride="carousel" >
+
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+       
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h4 style="text-align: center;">酥肉</h4>
+            <a href="image/b.JPG"><img src="image/b.JPG"></a>
+          </div>
+          <div class="carousel-item">
+            <h4 style="text-align: center;">自制薯片</h4>
+            <a href="image/f.JPG"><img src="image/f.JPG"></a>
+            
+          </div>
+          <div class="carousel-item">
+            <h4 style="text-align: center;"> 焦糖爆米花</h4>
+            <a href="image/e.jpg"><img src="image/e.jpg"></a>
+          </div>
+
+        </div>
+       
+        <!-- 左右切换按钮 -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <p style="color: red;background-color: aliceblue;"> 健康饮食是指每天摄入正常的蛋白质，蔬菜肉类来补充自己身体所需的营养。
+          健康饮食最重要的是为了改善或维持自身的健康而养成的一种健康的饮食习惯，通过自己对健康知识和食品功用的不断了解，找到适合自身健康发展的各类食品，培养一种合理的饮食习惯才是积极的针对自己的健康饮食。
+          </p>
+    </div>
+    
+    <div class="container" style="border: 1px solid ;">
+    <div class="row ">     
+     <div class="col-xl-3" style="border:1px solid;">
+      <div class="card">
+      <a href="image/b.JPG"><img src="image/b.JPG"  class="img-fluid card-img-top">  </a> 
+      <div class="card-body text-center">
+      <a href=""  data-toggle="modal"  data-target="#x1" style="text-decoration: none;"><h5 style="text-align: center;">酥肉</h5>
+      </a>
+      <div class="modal fade" id="x1">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/b.JPG"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body ">
+          <h5><strong>酥肉</strong></h5> 
+          <p >  在岁月的长河中，有一道美食，自古流传至今，香飘百里，令人口齿生津，那就是“酥肉”。
+            酥肉，作为中国传统美食之一，源远流长，历史悠久。据传，这道美味源自唐代，当时是皇家御厨的珍馐美馔。
+            随着时间的推移，酥肉逐渐传入民间，并在各地烹调技艺的融合下，形成了不同的地方特色。无论是在北方的饭馆小摊，
+            无论是在北方的饭馆小摊，还是南方的家常菜肴，酥肉都是备受追捧的美味佳肴。
+           </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/b.JPG" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      
+      </div>
+      </div>
+      <p>
+      1、猪肉切成半指长的条状，我选的肉是五花肉，也可以用里脊肉。
+      2、用酱油、料酒、糖、盐、胡椒粉调味。
+      3、加入一个鸡蛋，.将面粉与淀粉加入肉条中，继续搅拌至完全均匀。
+      4、整体状态是略微偏稀一点的，如果太干，加入少量食用油调节。
+      5、起油锅，待锅底开始冒气泡，转中小火，分批油炸至颜色金黄，捞起。
+      6、全部炸完后，升高油温，再快速过油炸一次，这样能保证酥肉外酥里嫩。
+     </p></div>
+     </div>
+     <div class="col-xl-3" style="border: 1px solid;"  >
+      <div class="card">
+      <a href="image/c.jpg"><img src="image/c.jpg" class="img-fluid card-img-top" > </a>
+      <div class="card-body text-center">
+      <a href="" data-toggle="modal"  data-target="#x2" style="text-decoration: none;"><h5 style="text-align: center;">冰糖草莓</h5>
+      </a>
+      <div class="modal fade" id="x2">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/c.jpg"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+          <h5><strong>冰糖草莓</strong></h5> 
+          <p>冰糖草莓（scientific name：Fragaria × ananassa Duch.）
+            是一种常见的水果，由于其外形鲜艳、口感酸甜，深受大众喜爱。冰糖草莓中富含丰富的维生素C和有机酸等营养物质，具有许多作用与功效。
+    </p>
+
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/c.jpg" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <p>
+        1.准备草莓450克、蓝莓80克。
+        2.用盐水泡五分钟，再用清水冲洗干净。
+        3.草莓去蒂，蓝莓控干水分。
+        4.用竹签把草莓和蓝莓串起来。
+        5.锅中放入100克白糖和100克清水，白糖融化的过程不能搅拌哦，等糖完全融化后，观察糖汁表面的气泡，开始会产生较大的气泡，继续加热。当气泡变的很小很浓密时，取一根筷子粘上糖水，放入冷水中，如果糖能够冷却结晶，这时糖浆就熬好了。
+        6.把草莓马上沾上冰糖液，轻轻滚一圈然后拿起。将裹好糖浆的草莓放在油纸上，待糖浆冷却凝固定型后，轻轻一拨，就可以开吃咯。
+      </p>
+    </div>
+    </div>
+     <div class="col-xl-3" style="border: 1px solid;">
+      <div class="card">
+      <a href="image/d.jpg"><img src="image/d.jpg"  class="img-fluid card-img-top"></a> 
+      <div class="card-body text-center">
+      <a href=""  data-toggle="modal"  data-target="#x3" style="text-decoration: none;"><h5 style="text-align: center;">炒红果</h5>
+      </a>
+      <div class="modal fade" id="x3">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/d.jpg"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+        <h5><strong>炒红果</strong></h5>
+          <p >  炒红果是老北京的传统小吃。
+            看起来晶莹剔透，吃起来更是酸酸甜甜，是很地道的北京美味。主要成分是山楂，富含多种高营养成份。
+            本品配料以蜂蜜、白糖为主；含有人体多种必需的营养元素。
+        </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/d.jpg" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+      </div>
+     <p >
+      1.准备新鲜山楂清洗干净待用。
+
+      2.用奶茶吸管辅助去掉核、蒂，然后再次冲洗一次去掉残留的果肉渣。
+      
+      3.把加工好的红果肉放入汤锅中，加入纯净水。
+      
+      4.放入330g的冰糖，大火烧沸后转小火继续熬煮，其间不要加水，注意别糊底。
+      
+      5.为保持形状，尽量不要用锅铲。待水再次沸腾后煮两分钟汤汁粘稠即可。注意火不能大了，火大山楂就都烂了。
+      
+      6.吃的时候撒上桂花即可，这个虽然不是老北京地道正宗的炒红果，但是很好吃，凉透以后放入干净的密封罐，冷藏之后吃更可口哦！
+      
+     </p>
+    </div>
+     </div>
+     <div class="col-xl-3" style="border: 1px solid;" >
+      <div  class="card">
+      <a href="image/e.JPG"><img src="image/e.JPG" class="img-fluid card-img-top"> </a>
+      <div class="card-body text-center">
+    <a  href="" data-toggle="modal"  data-target="#x4" style="text-decoration: none;"><h5 style="text-align: center;">焦糖爆米花</h5>
+    </a>
+    <div class="modal fade" id="x4">
+    <div class="modal-dialog  modal-dialog-centered" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>简介</h4>
+      <button class="close  text-right" data-dismiss="modal">×</button>
+    </div>
+       <div class="modal-body">
+      <div class="media">
+    <img src="image/e.JPG"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+     <div class="media-body "> 
+      <h5><strong>焦糖爆米花</strong> </h5>
+        <p > 焦糖爆米花是以高质量的玉米粒和焦糖原浆制作的 
+          因为它有很好的口感和方便简单的做法 。一直以来都是非常受欢迎的。 
+          焦糖爆米花是一道非常好吃的休闲食品，每天下班回家看电视的时候吃一把焦糖爆米那是非常惬意的。
+      </p>
+    </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+         <a href="image/e.JPG" class="btn btn-primary" >查看图片</a>
+          <button data-dismiss="modal" class="btn btn-success">ok</button>
+          </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p >1.冷锅倒入玉米油放玉米粒，让每一粒玉米粒都粘到油，玉米粒摊平。
+
+      2.第一粒玉米粒开始爆的时候，盖上锅盖，否则会爆炸的让你怀疑人生，过程中要不断地晃动锅，知道听不到玉米粒爆开的声音就可以了。
+      
+      3.拿锅铲把玉米花翻几遍散发湿气,及时把爆好的玉米花倒在容器里冷却。
+      
+      4.锅中倒入白砂糖和水，无需搅拌，小火煮开至冒泡。注意糖浆的颜色，一旦太深糖浆就会发苦，全程小火，不能搅拌。
+      
+      5.当糖浆变成琥珀色后加入黄油关火，迅速搅拌至黄油融化，加入盐、小苏打，糖浆会变得如奶油一般顺滑。
+      
+      6.把爆好的玉米花放进糖中，快速用铲子搅拌一下，让每一粒爆米花均匀地粘上焦糖。然后把爆米花摊开晾凉，黏在一起的用手掰开即可。
+      </p>
+    
+    </div>
+    </div>
+    </div>
+  <div class="row">
+      <div class="col-xl-3" style="border: 1px solid;">
+        <div class="card">
+        <a href="image/f.JPG"><img src="image/f.JPG" class="img-fluid card-img-top"></a> 
+       <div class="card-body text-center">
+      <a  href="" data-toggle="modal"  data-target="#x5" style="text-decoration: none;"><h5 style="text-align: center;">自制薯片</h5>
+      </a>
+      <div class="modal fade" id="x5">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/f.JPG"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+        <h5><strong>自制薯片</strong></h5>
+          <p >  自制薯片是一款制作简单的小零食。
+            薯片几乎人人都爱，尤其得到宝宝的宠爱，一点都不吃的话，很难办到。自制的薯片安全又放心，大家可以放心吃，用微波炉免油炸，一样的香脆。
+        10分钟之内，就可以从土豆变为香脆的薯片。
+        </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/f.JPG" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+       </div>
+      <p>1.挑选大个头点的土豆
+
+        2.土豆去皮洗净，切成薄片，越薄越脆。
+        
+        3.土豆片切好后多过几遍水，把土豆中的淀粉尽量的清洗掉，一开始水是发白的，到最后水变清亮了就可以了。
+        
+        4.然后再做开一锅水，加少许盐，把土豆片倒进开水中焯烫一下，焯烫至土豆半透明就可以了。
+        
+        5.煮好后的土豆片再捞出来过遍凉水，然后沥干水分。
+        
+        6.土豆片一定要沥干水分，否则炸的时候会溅油。
+        
+        7.锅中倒油要多一些保证能没过要炸的土豆片的量，油温烧到五成热时，把土豆片慢慢放进油锅中，全程中小火炸，看到边缘开始变色就可以夹出来了，炸的时间越长，口感越脆，但是要注意看紧了，颜色不要炸太深了，太深了容易导致口感发苦。
+        
+        8.捞出后放在吸油纸上，吸去多余油份。
+        
+        9.晾凉后根据个人口味加各种调味料，我只加了椒盐粉，口味因人而异，可以加孜然粉、椒盐、五香粉、海苔粉、烧烤粉等。
+        </p>
+      </div></div>
+      <div class="col-xl-3" style="border: 1px solid">
+        <div class="card">
+        <a href="image/g.JPG"><img src="image/g.JPG" class="img-fluid "></a> 
+      <div class="card-body text-center">
+      <a  href="" data-toggle="modal"  data-target="#x6" style="text-decoration: none;"><h5 style="text-align: center;">奶枣</h5>
+      </a>
+      <div class="modal fade" id="x6">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/g.JPG"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+      <h5><strong>奶枣</strong></h5>
+          <p>  奶枣，是由大枣去核，内含有杏仁等干果夹在其中，裹上奶粉制成，故叫奶枣。
+            奶枣是当下流行的小零食，很受年轻人的喜爱。它的材料对人体也有补气的作用，味道奶香，大枣香甜，杏仁醇香。
+        </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/g.JPG" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+       </div>
+      <p >1.红枣洗干净，晾干多余水分，用吸管去核，把坚果塞进去，什么坚果都可以，我用的是炭烧口味的腰果。
+
+        2.黄油倒入锅中，小火加热至融化，再倒入棉花糖，炒至融化。
+        
+        3.加奶粉继续搅拌，直到奶粉全部融入棉花糖里。
+        
+        4.倒入大枣翻炒，让所有枣的外面都裹上棉花糖。
+        
+        5.趁热把枣一颗一颗拽下来，整理一下，放进装着奶粉的盘子里，让枣子表面裹上奶粉即可。
+        </p>
+      </div></div>
+      <div class="col-xl-3" style="border: 1px solid;">
+        <div class="card">
+        <a href="image/h.WEBP"><img src="image/h.WEBP" class="img-fluid card-img-top"></a> 
+        <div class="card-body text-center">
+      <a  href=""  data-toggle="modal"  data-target="#x7" style="text-decoration: none;"><h5 style="text-align: center;">炸鲜奶</h5>
+      </a>
+      <div class="modal fade" id="x7">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/h.WEBP"  class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+        <h5><strong>炸鲜奶</strong></h5>
+          <p>  炸鲜奶是一道色香味俱全的汉族名点，又称炸牛奶，属于粤菜系。
+            炸鲜奶是以鲜奶为主要原料做成的一岛甜品。此甜品充分保持了新鲜牛奶的营养成分。
+            经过温油炸后，外皮脆而不硬，内部鲜嫩可口，并以其口感舒适美味、形态可爱的特点深受老人和儿童的喜爱。
+        </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/h.WEBP" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+      </div>
+     <p>1.将牛奶，白糖，玉米淀粉混合均匀，小火加热，不断搅拌。
+
+      2.打成顺滑浓稠的奶糊后关火，开着火就要不停搅拌，以免糊底！
+      
+      3.倒入平底模具内，冷藏三小时。
+      
+      4.三小时后冰箱取出奶块切成条状。
+      
+      5.奶条按照顺序裹上玉米淀粉、鸡蛋液、面包糠。
+      
+      6.油锅六成热后转小火，放入奶糕条，炸至金黄。
+      
+      7.炸至外皮颜色变得金黄焦脆后沥油捞出即可。
+      </p>
+      </div>
+      </div>
+      <div class="col-xl-3" style="border: 1px solid;" >
+        <div class="card">
+        <a href="image/i.jpg"><img src="image/i.jpg"  class="img-fluid card-img-top"></a> 
+       <div class="card-body text-center">
+      <a   href=""  data-toggle="modal"  data-target="#x8" style="text-decoration: none;"><h5 style="text-align: center;">桃酥</h5>
+      </a>
+      <div class="modal fade" id="x8">
+      <div class="modal-dialog  modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>简介</h4>
+        <button class="close  text-right" data-dismiss="modal">×</button>
+      </div>
+         <div class="modal-body">
+        <div class="media">
+      <img src="image/i.jpg" class="img-fluid align-self-center" style="width: 50%;height: 50%;">
+       <div class="media-body "> 
+        <h5><strong>桃酥</strong></h5>
+          <p >  桃酥起源于江西，是南北皆知的一种特色汉族小吃，因为酥、脆、甜等特点闻名全国。
+            相传在唐元时期，制陶瓷的平民，经常将自家的面粉搅拌之后带去烤陶瓷的炉子中去烤，因为长期咳嗽，会在制作的时候加入一些桃仁碎来止咳，
+            其他平民纷纷模仿，就有了“陶酥”，后来人们根据制作食材以及谐音，也叫做“桃酥”。
+        </p>
+      </div>
+      </div>
+      </div>
+        <div class="modal-footer">
+           <a href="image/i.jpg" class="btn btn-primary" >查看图片</a>
+            <button data-dismiss="modal" class="btn btn-success">ok</button>
+            </div>
+      </div>
+      </div>
+      </div>
+      <p>1.准备食材。
+
+        2.玉米油，白砂糖、盐和一个蛋黄，一起加入一个干净容器里，手动打蛋器搅拌均匀。
+        
+        3.把低筋粉、淀粉、小苏打和泡打粉称重后倒入一个无水容器，然后把混合好的粉类过筛，到油蛋碗里。
+        
+        4.用刮刀把液体和粉类兜底翻拌均匀。翻拌的正确方法是一边拌一边朝下按压刮刀。拌到无干粉，面团油润。
+        
+        5.把面团分成均匀的6份。
+        
+        6.用拇指轻轻在中间按压几下，四周自然开裂是正常的。在桃酥表面薄薄刷上一层全蛋液，撒上黑芝麻。提前5分钟预热烤箱，180度20分钟。
+        </p>
+      </div>
+  </div>
+    </div>
+
+
+
+      </div>
+    </body>
+    </html>
+
+   
+
+

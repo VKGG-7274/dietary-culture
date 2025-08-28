@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/top.css">
+    <style>
+        #logo{
+            transform: scale(1);
+        }
+        #img4:hover{
+            transform: scale(1);
+        }
+        #img5:hover{
+            transform: scale(1);
+        }
+        #img6:hover{
+            transform: scale(1);
+        }
+        #img7:hover{
+            transform: scale(1);
+        }
+        #img8:hover{
+            transform: scale(1);
+        }
+        #img9:hover{
+            transform: scale(1);
+        }
+        #img10:hover{
+            transform: scale(1);
+        }
+        #img11:hover{
+            transform: scale(1);
+        }
+        #img12:hover{
+            transform: scale(1);
+        }
+        img{
+            /* transition: 这是CSS属性的名称，用于指定元素在状态改变时的过渡效果。 */
+            /* 0.3s: 这是指定过渡效果的持续时间，以秒为单位。在这里，它表示过渡效果将持续0.3秒。 */
+            /* ease-in-out: 这是指定过渡效果的速度曲线（timing function），它控制了过渡效果的速度变化。ease-in-out表示过渡效果将在开始和结束时慢，而在中间时快。 */
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            /* transform: 这是CSS属性的名称，用于指定元素的变换效果。 */
+            /* scale(1.2): 这是transform属性的属性值，它表示对元素进行缩放操作。在这里，scale(1.2)指定了元素在水平和垂直方向上都放大1.2倍。 */
+            transform: scale(1.2);
+        }
+        /* filter:alpha(Opacity=80);: 这是IE浏览器下的透明度设置，用于控制元素的透明度。在这里，filter:alpha(Opacity=80);表示将图片的透明度设置为80%。*/
+        /* -moz-opacity:0.8;: 这是针对Firefox浏览器的透明度设置，同样用于控制元素的透明度。在这里，-moz-opacity:0.8;也表示将图片的透明度设置为80%。 */
+        /* opacity: 0.8: 这是CSS3中的透明度设置，同样用于控制元素的透明度。在这里，opacity: 0.8表示将图片的透明度设置为80%。 */
+        .div2 a:hover img{filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8} 
+        a:hover{
+            color: rgb(245, 160, 176);
+            text-decoration: none;
+        }
+        a{
+            color: #333;
+        }
+        .a9{
+            color: orangered;
+        }
+        .a9:hover{
+            color: orangered;
+            text-decoration: none;
+        }
+        .a2{
+            color: #333;
+        }
+        .a2:hover{
+            color: orange;
+            text-decoration: none;
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        }
+        button{
+            width: 154px;
+            height: 52px;
+            border: none;
+            background-color: white;
+        }
+        button:hover{
+            background-color: pink;
+        }
+        .inframe-container{
+            overflow: hidden;
+        }
+        .droplrft{
+            overflow: hidden;
+        }
+        .nav-item.nav-link.active{
+            background-color: antiquewhite;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; height: 50px; background-color: rgb(189, 11, 11); " class="fixed-top"></div>
+    <div class="container">
+        <!-- 导航栏 -->
+        <div class="row navbar navbar-expand-lg  navbar-light fixed-top" id="row">
+            <div class="col-lg-3 bavber-brand">
+                <img src="image/logo1.jpg" class="img-fluid" id="logo">
+            </div>
+            <button class="navbar-toggler" data-target="#my" data-toggle="collapse" style="margin-bottom: 20px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-lg-6 collapse navbar-collapse" id="my">
+                <nav class="nav nav-pills navbar-nav">
+                    <!-- active-点击会变成红色 -->
+                    <a href="index.html" class="nav-item nav-link " id="a" >首页</a>
+                    <a href="main display.html" class="nav-item nav-link" id="a">打卡展示</a>
+                    <a href="other display.html" class="nav-item nav-link" id="a">视觉盛宴</a>
+                    <a href="festivals_food.html" class="nav-item nav-link" id="a">节日饮食</a>
+                    <a href="good_food.html" class="nav-item nav-link" id="a">健康美食</a>
+                    <a href="msglyzs2.html" class="nav-item nav-link active" id="a" style="background-color: rgb(189, 30, 30);">美食天下</a>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger" id="s1">搜索</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="top" style="margin-top: 182px;">
+        <div class="row">
+            <div class="col-xl-12" style="text-align: center;">
+                <a href="msglyzs2.html" title="美食天下"><img src="image/50.jpg" alt="" class="img-fluid" id="img6"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <!-- 30% 是具体的数值，表示左外边距的大小为父元素宽度的30%。 -->
+                <!-- nav-justified 在水平方向上占相同的宽度 -->
+                <!-- nav-item导航栏的一个项目 -->
+            <nav class="nav nav-justified" style="margin-left: 30%;">
+                <h5><a href="#" class="nav-item nav-link">菜谱</a></h5>
+                <h5><a href="#" class="nav-item nav-link">食材</a></h5>
+                <h5><a href="#" class="nav-item nav-link">咨询</a></h5>
+                <h5><a href="#" class="nav-item nav-link">笔记</a></h5>
+                <h5><a href="#" class="nav-item nav-link">社区</a></h5>
+                <!-- data-toggle="modal"响应的是一个模态框事件 -->
+                <h5><a href="" class="nav-item nav-link" data-toggle="modal" data-target="#my-modal">登录/注册</a></h5>
+            </nav>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-xl-2" style="margin-top: 32px;">
+                <nav class="nav nav-tabs nav-justified">
+                    <div class="dropright">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">专题专区</button>
+                    <div class="dropdown-menu">
+                        <div class="row" style="text-align: center;">
+                            <div class="col-12">
+                                <a href="msglyzs10.html" class="dropdown-item nav-item nav-link" title="年夜饭"><h3>年夜饭<span class="badge bage-pill badge-danger">火</span></h3></a>
+                                <p><a href="msglyzs10.html" class="dropdown-item nav-item nav-link" title="年夜饭吃什么？">年夜饭吃什么？</a></p>
+                                <a href="#" class="dropdown-item nav-item nav-link" title="家常菜谱"><h3>家常菜谱<span class="badge bage-pill badge-danger">特色</span></h3></a>
+                                <p><a href="#" title="家常必备36款">家常必备36款</a></p>
+                                <a href="#" class="dropdown-item nav-item nav-link" title="食疗食补"><h3>食疗食补</h3></a>
+                                <p><a href="#" title="共212个专题">共212个专题</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="image/29.jpg" class="nav-item nav-link dropdown-item"><img src="image/29.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="image/30.jpg" class="nav-item nav-link dropdown-item"><img src="image/30.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- class="dropright"向右展开的下拉 -->
+                    <div class="dropright">
+                        <!-- data-toggle="dropdown"响应的是一个下拉事件 -->
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">客户端</button>
+                        <div class="dropdown-menu col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12" style="text-align: center;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="image/29.jpg" class="nav-item nav-link dropdown-item"><img src="image/31.jpg" alt="" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="image/29.jpg" class="nav-item nav-link dropdown-item"><img src="image/32.jpg" alt="" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropright">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">饮食健康</button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-item nav-link dropdown-item" title="食疗食补">食疗食补<span class="badge bage-pill badge-danger">火</span></a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="营养排行">营养排行</a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="饮食常识">饮食常识</a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="瘦身美容">瘦身美容<span class="badge bage-pill badge-warning">热</span></a>
+                        </div>
+                        </div>
+                    <div class="dropright">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">菜谱</button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-item nav-link dropdown-item" title="一周热门">一周热门<span class="badge bage-pill badge-warning">热</span></a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="人气菜肴">人气菜肴</a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="新秀菜谱">新秀菜谱<span class="badge bage-pill badge-success">新</span></a>
+                            <a href="#" class="nav-item nav-link dropdown-item" title="高颜值">高颜值</a>
+                        </div>
+                    </div>
+                    <div class="dropright">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">食材大全</button>
+                    <div class="dropdown-menu">
+                    <a href="#" class="nav-item nav-link dropdown-item" title="鲜果干果">鲜果干果</a>
+                    <a href="#" class="nav-item nav-link dropdown-item" title="蔬菜瓜菌">蔬菜瓜菌</a>
+                    <a href="#" class="nav-item nav-link dropdown-item" title="营养排行">营养排行<span class="badge bage-pill badge-warning">热</span></a>
+                    <a href="#" class="nav-item nav-link dropdown-item" title="小龙虾">小龙虾<span class="badge bage-pill badge-danger">火</span></a>
+                    </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-xl-10">
+                <!-- carousel创建轮播图 -->
+                <!-- slide动画（滑动效果） -->
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                                <!-- data-ride="carousel"用于设置轮播图自动播放 -->
+                    <!-- 指示符 -->
+                    <ul class="carousel-indicators">
+                        <!-- carousel-indicators指示器，用于指定播放到第几张图片 -->
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    
+                    <!-- 轮播图片 -->
+                    <div class="carousel-inner">
+                        <!-- carousel-inner轮播图的图片容器 -->
+                        <div class="carousel-item active">
+                        <img src="image/26.jpg" id="img7">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="image/27.jpg" id="img8">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="image/28.jpg" id="img9">
+                        </div>
+                    </div>
+                    
+                    <!-- 左右切换按钮 -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <!-- carousel-control轮播的控件 -->
+                        <!-- prev前 -->
+                        <span class="carousel-control-prev-icon"></span>
+                        <!-- carousel-control-prev-icon轮播的组件 -->
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <!-- carousel-control轮播的控件 -->
+                        <!-- next后 -->
+                        <span class="carousel-control-next-icon"></span>
+                        <!-- carousel-control-next-icon轮播的组件 -->
+                    </a>
+                    </div>
+            </div>   
+        </div>
+    </div>
+    <div class="container">
+        <!-- modal创建模态框 -->
+        <!-- fade淡化（动画效果） -->
+        <div class="modal fade" id="my-modal">
+            <div class="modal-dialog">
+                <!-- modal-dialog对话框 -->
+                <div class="modal-content">
+                    <!-- modal-content模态框里面的内容 -->
+                    <div class="modal-header">
+                        <nav class="nav nav-pills nav-justified">
+                            <a href="#dl" class="nav-item nav-link active" data-toggle="tab">登录</a>
+                            <a href="#zc" class="nav-item nav-link" data-toggle="tab">注册</a>
+                        </nav>
+                        <button class="close" data-dismiss=modal>&times;</button>
+                        <!-- data-dismiss=modal用来关闭模态框 -->
+                        <!-- &times;打叉的一个符号 -->
+                    </div>
+                    <div class="container">
+                    <div class="tab-content">
+                        <!-- tab-content相当于一个容器，储存动态选项卡里面的内容 -->
+                        <div class="tab-pane active" id="dl">
+                            <form action="" class="was-validated">
+                                <!-- was-validated添加验证功能 -->
+                                <!-- form表单 -->
+                                <div class="form-group">
+                                    <!-- form-group表单组 -->
+                                    <label for="usename1">账号</label>
+                                    <input type="text" class="form-control" placeholder="请输入账号" pattern="[0-9]{10}" id="usename1" required>
+                                    <div class="valid-feedback">账号输入格式正确</div>
+                                    <!-- valid-feedback验证通过反馈的信息 -->
+                                    <div class="invalid-feedback">账号输入格式错误</div>
+                                    <!-- valid-feedback验证不通过反馈的信息 -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="mima1">密码</label>
+                                    <input type="password" class="form-control" placeholder="请输入密码" pattern="[A-Z]{1}[a-z]{2}[0-9]{8}" id="mima1" required>
+                                    <div class="valid-feedback">密码输入格式正确</div>
+                                    <div class="invalid-feedback">密码输入格式错误</div>
+                                </div>
+                                <button class="btn btn-primary" data-dismiss="modal" onclick="dl()" style="float: right;">登录</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="zc">
+                            <form action="" class="was-validated">
+                                <div class="form-group">
+                                    <label for="usename2">账号</label>
+                                    <input type="text" class="form-control" placeholder="请输入账号" pattern="[0-9]{10}" id="usename2" required>
+                                    <div class="valid-feedback">账号输入格式正确</div>
+                                    <div class="invalid-feedback">账号输入格式错误</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mima2">密码</label>
+                                    <input type="password" class="form-control" placeholder="请输入密码" pattern="[A-Z]{1}[a-z]{2}[0-9]{8}" id="mima2" required>
+                                    <div class="valid-feedback">密码输入格式正确</div>
+                                    <div class="invalid-feedback">密码输入格式错误</div>
+                                </div>
+                                <button class="btn btn-primary" data-dismiss="modal" onclick="zc()" style="float: right;">注册</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <nav class="nav nav-pills nav-justified">
+                <a href="#id1" class="nav-item nav-link active" data-toggle="tab"><h4><svg t="1701520999213" class="icon" style="height: 60px; width:52px; margin-right: 10px; margin-bottom: 8px;"
+                    viewBox="0 0 1858 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14498"><path d="M1708.723191 0H149.612167A149.562412 149.562412 0 0 0 0 149.612167v724.775666a149.562412 149.562412 0 0 0 149.612167 149.612167h1559.111024a149.562412 149.562412 0 0 0 149.612167-149.612167V149.612167A149.562412 149.562412 0 0 0 1708.723191 0z" fill="#FFB12C" p-id="14499"></path><path d="M642.332248 744.578009v-492.570818h-102.395024v287.332977L335.047665 252.007191H232.602886v492.570818h102.444779V457.245032l208.969438 287.332977h98.315145M1052.111365 355.447063V252.007191h-327.833244v492.570818h327.833244v-102.643798h-204.889558v-91.100724h204.889558V447.393615h-204.889558V355.447063h204.889558M1625.732472 662.482873v-410.475682h-102.444779v369.428113h-91.797289V334.102327h-102.395025v287.332977h-92.643117V252.007191h-102.395025v410.475682a82.045382 82.045382 0 0 0 81.945873 82.095136h327.783489a82.045382 82.045382 0 0 0 81.945873-82.095136z" fill="#FFFFFF" p-id="14500"></path></svg>最新发布</h4></a>
+                <a href="#id2" class="nav-item nav-link" data-toggle="tab"><h4><svg t="1701521096957" class="icon" style="height: 60px; width:52px; margin-right: 10px; margin-bottom: 8px;"
+                    viewBox="0 0 1251 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16051"><path d="M1098.24 812.487111v71.111111h-192.853333v-71.111111zM1075.939556 282.168889v356.465778c0 74.183111-57.457778 135.480889-129.649778 138.752l-6.058667 0.142222H844.8v-71.111111h95.431111c33.763556 0 62.151111-27.847111 64.455111-63.146667l0.142222-4.636444V353.28H593.834667v77.255111h-71.111111V282.168889h553.244444zM223.004444 572.017778l13.027556 69.916444c-25.258667 4.721778-46.449778 14.364444-62.72 30.776889l-4.323556 4.664889c-2.190222 2.275556-6.257778 7.082667-10.24 13.141333-3.982222 5.973333-6.712889 11.548444-7.850666 15.672889l-0.540445 2.56-0.056889 0.967111c-0.369778 6.826667 3.242667 19.114667 16.213334 34.901334l2.076444 2.389333 169.728 146.033778 3.584 2.048 1.649778 0.796444c7.765333 3.612444 14.506667 4.352 19.456 1.991111a26.823111 26.823111 0 0 0 9.130667-7.879111l2.474666-3.413333 58.766223 40.049778c-11.093333 16.298667-24.519111 28.216889-39.936 35.498666-27.136 12.885333-54.755556 9.955556-79.928889-1.792a102.741333 102.741333 0 0 1-15.331556-8.704l-4.465778-3.242666L120.32 799.288889l-3.356444-3.299556c-27.221333-30.492444-37.660444-60.728889-37.774223-85.191111l0.170667-5.916444 0.256-2.986667 0.398222-3.413333c2.360889-16.497778 9.386667-32.056889 19.484445-47.274667 5.802667-8.732444 11.548444-15.843556 15.36-20.024889l1.763555-1.848889c25.457778-29.383111 59.392-46.990222 98.048-55.608889l8.334222-1.706666z" fill="#5AC2EE" p-id="16052"></path><path d="M735.146667 759.324444l2.645333-3.242666c7.338667-9.528889 11.946667-18.631111 14.421333-27.079111 1.308444-4.380444 1.792-7.651556 1.905778-9.557334l0.028445-1.052444-0.142223-1.649778c-0.682667-4.949333-3.811556-12.145778-8.732444-19.911111a115.2 115.2 0 0 0-8.96-12.316444l-2.730667-3.128889c-10.467556-12.629333-24.092444-21.959111-40.533333-28.416a162.076444 162.076444 0 0 0-61.667556-10.439111l-7.793777 0.341333-5.944889 1.479111-17.066667-69.034667 8.590222-2.133333 4.380445-0.796444 3.697777-0.341334 2.503112-0.199111a231.708444 231.708444 0 0 1 99.328 14.961778c24.376889 9.557333 45.909333 23.608889 62.577777 41.585778l5.404445 6.172444c4.949333 5.319111 11.605333 13.653333 18.289778 24.206222 9.898667 15.587556 16.782222 31.544889 19.086222 48.184889l0.739555 7.736889c1.194667 24.092444-7.281778 54.613333-32 86.044445l-5.176889 6.314666-3.242666 3.328-175.217778 157.610667a101.432889 101.432889 0 0 1-18.062222 11.064889c-25.400889 12.373333-53.447111 15.530667-80.952889 1.934222-13.539556-6.684444-25.514667-17.066667-35.669333-30.890667l-4.238223-6.144 59.619556-38.741333c4.323556 6.627556 8.248889 10.268444 11.776 12.003556 4.551111 2.275556 10.808889 1.564444 18.318222-2.104889l3.783111-1.934223 171.036445-153.856z" fill="#5AC2EE" p-id="16053"></path><path d="M793.031111 736.625778l7.822222 8.135111c10.325333 10.752 25.031111 28.387556 39.822223 50.631111 19.683556 29.696 33.649778 59.448889 39.224888 88.974222 0.853333 4.465778 1.479111 8.931556 1.905778 13.340445l0.284445 4.352 0.455111 3.84c1.28 13.511111 0.625778 28.188444-3.612445 43.036444-8.135111 28.273778-27.960889 49.635556-56.888889 56.120889l-9.699555 1.848889a126.577778 126.577778 0 0 1-5.717333 0.796444c-54.755556 6.570667-127.004444-8.504889-209.464889-60.700444l-9.216-5.944889-10.695111-7.082667 39.224888-59.306666 10.666667 7.054222c41.130667 27.164444 79.672889 43.491556 115.000889 51.171555 20.878222 4.551111 38.115556 5.632 51.285333 4.664889l6.257778-0.654222 3.413333-0.597333c4.892444-0.768 6.001778-1.905778 7.480889-6.968889 1.052444-3.726222 1.479111-8.220444 1.422223-12.515556l-0.312889-5.006222-0.426667-4.039111a75.320889 75.320889 0 0 0-1.251556-10.24c-3.498667-18.659556-13.681778-40.362667-28.586666-62.805333-5.319111-7.964444-10.922667-15.644444-16.611556-22.840889l-5.688889-6.997334a271.928889 271.928889 0 0 0-8.362666-9.585777l-9.016889-9.443556 51.313778-49.208889zM453.148444 436.451556h-1.877333a274.773333 274.773333 0 0 0-77.937778 13.141333c-41.756444 13.738667-74.382222 37.603556-91.733333 74.524444-2.474667 6.257778-4.152889 11.946667-5.717333 19.370667l-1.336889 7.054222c-5.176889 30.862222-3.185778 66.645333 10.154666 105.187556l103.623112 284.444444-0.739556-2.816c1.763556 7.480889 5.461333 16.440889 12.344889 25.628445a65.422222 65.422222 0 0 0 49.578667 26.595555h4.181333a67.214222 67.214222 0 0 0 49.464889-25.685333c7.111111-8.874667 11.150222-17.578667 13.283555-24.832l103.139556-282.766222c14.506667-42.069333 15.729778-80.384 8.988444-112.782223a116.849778 116.849778 0 0 0-4.664889-16.867555c-18.432-39.452444-51.057778-63.317333-92.785777-77.084445a274.773333 274.773333 0 0 0-77.966223-13.112888z m-6.769777 71.338666l5.831111-0.256h-0.938667c45.283556 1.194667 88.462222 14.762667 104.931556 42.552889l1.820444 3.413333 0.910222 4.522667 1.052445 5.717333c3.015111 19.456 1.536 42.808889-7.424 68.778667l-100.352 275.256889-100.522667-275.825778c-8.789333-25.457778-10.24-48.782222-7.224889-68.209778l1.024-5.717333c0.768-3.697778 1.422222-5.831111 1.564445-6.200889 12.686222-26.794667 54.328889-41.585778 99.328-44.032zM1103.644444 397.852444c69.518222 0 126.577778 54.385778 126.577778 122.311112 0 67.953778-57.031111 122.368-126.577778 122.368-18.602667 0-36.693333-3.896889-53.219555-11.349334l-6.997333-3.384889 32.995555-62.976c8.248889 4.295111 17.493333 6.599111 27.221333 6.599111 31.004444 0 55.466667-23.324444 55.466667-51.256888 0-27.875556-24.462222-51.2-55.466667-51.2-7.822222 0-15.36 1.507556-22.272 4.323555l-5.091555 2.360889-33.223111-62.862222a129.479111 129.479111 0 0 1 60.586666-14.933334zM111.416889 736.625778l51.285333 49.237333-7.793778 8.135111a341.248 341.248 0 0 0-31.857777 40.732445c-14.933333 22.471111-25.116444 44.145778-28.615111 62.776889l-0.853334 5.262222-0.910222 9.870222c-0.512 5.404444-0.227556 11.719111 1.194667 16.696889 1.28 4.408889 2.275556 5.859556 7.452444 6.968889l3.811556 0.654222 1.137777 0.142222c13.653333 1.621333 32.540444 0.910222 56.035556-4.209778 32.398222-7.054222 67.470222-21.333333 104.732444-44.572444l10.24-6.570667 10.695112-7.111111 39.224888 59.335111-10.723555 7.111111c-86.272 56.974222-161.848889 73.443556-218.652445 66.616889l-7.253333-1.080889-0.170667-0.056888c-34.417778-5.376-56.263111-27.591111-64.881777-57.628445a113.322667 113.322667 0 0 1-4.096-36.181333l0.682666-9.045334 0.227556-1.564444 0.284444-4.437333 0.824889-6.656 1.109334-6.684445c5.546667-29.496889 19.541333-59.278222 39.253333-88.974222 13.112889-19.768889 26.225778-35.896889 36.209778-46.791111l11.377777-11.946667zM943.957333 12.174222a35.555556 35.555556 0 0 1 3.640889 70.940445l-3.640889 0.170666h-203.434666c-5.688889 0-11.690667 6.200889-11.690667 12.572445 0 5.660444 4.693333 11.150222 9.756444 12.288l1.934223 0.227555h91.164444c39.765333 0 72.305778 32.995556 72.305778 72.476445 0 37.859556-29.952 69.973333-67.555556 72.476444l-4.750222 0.142222h-40.021333l-0.654222 0.113778-0.540445 0.227556v6.058666a35.555556 35.555556 0 0 1-70.912 3.612445l-0.199111-3.612445v-6.058666c0-38.001778 30.094222-68.892444 67.584-71.281778l4.721778-0.170667h40.021333c0.170667 0 1.194667-1.024 1.194667-1.507555 0-0.284444-0.426667-0.796444-0.768-1.109334l-0.426667-0.256h-91.164444c-45.568 0-82.801778-38.485333-82.801778-83.626666 0-43.52 34.673778-80.924444 77.937778-83.541334l4.835555-0.142222h203.463111z" fill="#5AC2EE" p-id="16054"></path></svg>早餐</h4></a>
+                <a href="#id3" class="nav-item nav-link" data-toggle="tab"><h4><svg t="1701521327471" class="icon" style="height: 60px; width:52px; margin-right:2px; margin-bottom: 8px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17250"><path d="M694 640.7H323.6v123.2H694V640.7z" fill="#FFD800" p-id="17251"></path><path d="M819.2 447.9c0-75.3-61.9-136.6-138-136.6-13.6 0-26.9 2-39.7 5.9-21.8-49.3-71.3-81.7-126.3-81.7-56 0-105.7 33.1-127.1 83.5-14.5-5-29.7-7.7-45.3-7.7-76.1 0-138 61.3-138 136.6 0 65 45.2 119.8 108.6 133.4v162.1c0 16.9 13.8 30.7 30.7 30.7h329.4c16.9 0 30.7-13.8 30.7-30.7V582.5c66.2-10.9 115-67.1 115-134.6zM673.5 753.6H344.1c-5.6 0-10.2-4.6-10.2-10.2v-92.5h349.9v92.5c0 5.6-4.6 10.2-10.3 10.2z m19.4-190.1l0.1 0.8c-5.1 0.6-9.2 4.7-9.2 10v56.1H496.7V525.6c0-5.7-4.6-10.2-10.2-10.2s-10.2 4.6-10.2 10.2v104.8h-56.2v-57.7c0-5.7-4.6-10.2-10.2-10.2s-10.2 4.6-10.2 10.2v57.7H334v-56.1c0-2.8-1.1-5.2-2.9-7.1-1.5-2.4-3.9-4.1-6.9-4.6-57.2-9.1-98.7-57.3-98.7-114.7 0-64 52.7-116.1 117.5-116.1 15.4 0 30.3 3 44.4 8.7 1 0.8 2.1 1.5 3.4 1.9 1.1 0.4 2.2 0.5 3.2 0.5 4.3 0 8.3-2.7 9.7-7 15.8-47.8 60.7-80 111.7-80 49.9 0 94.5 31.3 110.9 77.8 1.9 5.3 7.7 8.2 13.1 6.2 0.9-0.3 1.7-0.9 2.4-1.5 12.7-4.5 26-6.8 39.6-6.8 64.8 0 117.5 52.1 117.5 116.1-0.2 60.3-45.7 110-106 115.8z" fill="#444444" p-id="17252"></path></svg>经典家常菜</h4></a>
+                <a href="#id4" class="nav-item nav-link" data-toggle="tab"><h4><svg t="1701521449952" class="icon" style="height: 60px; width:52px; margin-right:6px; margin-bottom: 8px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18693"><path d="M773.297493 784.22016h-332.253866c-61.66528 0-112.121173-50.455893-112.121174-112.121173v-38.2976c0-61.66528 50.455893-112.121173 112.121174-112.121174h332.253866c61.66528 0 112.121173 50.455893 112.121174 112.121174v38.2976c-0.006827 61.66528-50.455893 112.121173-112.121174 112.121173z" fill="#FFEACC" p-id="18694"></path><path d="M396.834133 659.851947v-15.6672c0-67.8912 55.54176-123.43296 123.43296-123.43296h-59.098453c-67.884373 0-123.43296 55.54176-123.43296 123.43296v15.6672c0 67.8912 55.54176 123.43296 123.43296 123.43296h59.098453c-67.8912 0-123.43296-55.54176-123.43296-123.43296z" fill="#F2D7B3" p-id="18695"></path><path d="M282.760533 323.467947l37.6832-37.6832 217.00608 217.019733-37.6832 37.676373z" fill="#FCC979" p-id="18696"></path><path d="M321.378987 362.0864l37.6832-37.6832 141.571413 141.57824-37.6832 37.6832z" fill="#A6503F" p-id="18697"></path><path d="M362.407253 401.476267l37.6832-37.676374 61.965654 61.965654-37.6832 37.6832z" fill="#F4B77D" p-id="18698"></path><path d="M401.14176 233.984l51.15904-14.916267 85.899947 294.62528-51.15904 14.916267z" fill="#FCC979" p-id="18699"></path><path d="M416.433493 286.4128l51.15904-14.916267 56.046934 192.211627-51.15904 14.916267z" fill="#A6503F" p-id="18700"></path><path d="M433.4592 340.6848l51.15904-14.916267 24.528213 84.125014-51.15904 14.916266z" fill="#FCC979" p-id="18701"></path><path d="M866.461013 513.76128l-528.267946 5.352107c-33.068373 0.334507-59.849387 27.661653-59.51488 60.730026l0.095573 9.46176c0.28672 28.521813 20.677973 52.3264 47.49312 58.12224 4.77184-33.928533 33.655467-60.218027 68.95616-60.573013 35.826347-0.361813 65.549653 26.118827 70.3488 60.689067l1.06496-0.013654c3.918507-35.075413 33.368747-62.54592 69.556907-62.91456 36.18816-0.36864 66.205013 26.494293 70.833493 61.494614l1.058133-0.013654c4.041387-34.788693 33.32096-61.986133 69.256534-62.347946 35.9424-0.361813 65.815893 26.228053 70.567253 60.928l1.549653-0.013654c4.041387-34.79552 33.375573-61.986133 69.317974-62.347946 34.597547-0.34816 63.56992 24.2688 69.932373 57.05728 22.698667-8.799573 38.823253-30.958933 38.56384-56.640854l-0.095573-9.46176c-0.320853-33.068373-27.654827-59.84256-60.716374-59.508053z" fill="#F89FB1" p-id="18702"></path><path d="M371.991893 526.90944l-36.242773 0.006827c-21.763413 0-50.059947 22.637227-50.251093 49.588906l0.08192 7.939414c0.24576 23.94112 14.035627 44.332373 34.932053 53.036373 1.501867-10.676907 10.786133-24.69888 17.196373-32.768a49.759573 49.759573 0 0 1-4.532906-20.2752l-0.08192-7.939413c-0.279893-27.7504 11.14112-49.309013 38.898346-49.588907M715.18208 392.78592h-27.948373c1.14688-5.700267 1.76128-11.59168 1.76128-17.626453 0-48.954027-39.683413-88.644267-88.644267-88.644267-48.954027 0-88.644267 39.683413-88.644267 88.644267 0 6.191787 0.641707 12.22656 1.850027 18.056533-29.853013 3.447467-53.234347 28.95872-53.234347 59.692373v3.29728c0 33.068373 27.05408 60.122453 60.122454 60.122454h194.730666c33.068373 0 60.122453-27.05408 60.122454-60.122454v-3.29728c0.006827-33.068373-27.047253-60.122453-60.115627-60.122453z" fill="#EB6984" p-id="18703"></path><path d="M366.40768 726.289067m-48.837973 0a48.837973 48.837973 0 1 0 97.675946 0 48.837973 48.837973 0 1 0-97.675946 0Z" fill="#5AC2E1" p-id="18704"></path><path d="M750.769493 359.819947m-41.956693 0a41.956693 41.956693 0 1 0 83.913387 0 41.956693 41.956693 0 1 0-83.913387 0Z" fill="#FDE96C" p-id="18705"></path><path d="M569.910613 431.397547m-21.89312 0a21.89312 21.89312 0 1 0 43.78624 0 21.89312 21.89312 0 1 0-43.78624 0Z" fill="#FDE96C" p-id="18706"></path><path d="M628.155733 373.152427m-21.89312 0a21.89312 21.89312 0 1 0 43.78624 0 21.89312 21.89312 0 1 0-43.78624 0Z" fill="#F89FB1" p-id="18707"></path><path d="M677.690027 460.868267m-21.89312 0a21.89312 21.89312 0 1 0 43.78624 0 21.89312 21.89312 0 1 0-43.78624 0Z" fill="#84E2FD" p-id="18708"></path><path d="M846.308693 851.72224H378.22464c-28.726613 0-65.78176-20.56192-74.779307-38.966613l-15.03232-36.625067c0-1.29024 1.41312-2.341547 3.140267-2.341547h641.426773c1.727147 0 3.140267 1.058133 3.140267 2.341547l-15.03232 36.625067c-9.475413 19.633493-46.045867 38.966613-74.779307 38.966613z" fill="#F89FB1" p-id="18709"></path><path d="M369.547947 813.008213l-13.0048-29.893973c0-1.051307 1.221973-1.911467 2.717013-1.911467h-60.381867c-1.49504 0-2.717013 0.86016-2.717013 1.911467l13.0048 29.893973c7.789227 15.025493 39.85408 31.80544 64.709973 31.80544h60.381867c-24.855893 0-56.920747-16.779947-64.709973-31.80544z" fill="#EB6984" p-id="18710"></path></svg>烘培精选</h4></a>
+            </nav>
+            <div class="tab-content">
+                <div class="tab-pane active" id="id1">
+                    <div class="container" style="background-color: antiquewhite; text-align: center;">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/9.jpg" title="芥末虾"><img src="image/9.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/9.jpg" title="芥末虾">芥末虾</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/10.jpg" title="肉末海米青菜粥"><img src="image/10.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/10.jpg" title="肉末海米青菜粥">肉末海米青菜粥</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/11.jpg" title="鸡蛋瑶柱炒韭菜"><img src="image/11.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/11.jpg" title="鸡蛋瑶柱炒韭菜">鸡蛋瑶柱炒韭菜</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/12.jpg" title="冰糖桂花蒸酥梨"><img src="image/12.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/12.jpg" title="冰糖桂花蒸酥梨">冰糖桂花蒸酥梨</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/13.jpg" title="香酥排骨"><img src="image/13.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/13.jpg" title="香酥排骨">香酥排骨</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/14.jpg" title="酱烧鸡腿"><img src="image/14.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/14.jpg" title="酱烧鸡腿">酱烧鸡腿</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/15.jpg" title="土鸡汤"><img src="image/15.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/15.jpg" title="土鸡汤">土鸡汤</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/16.jpg" title="羊肉烧白萝卜"><img src="image/16.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/16.jpg" title="羊肉烧白萝卜">羊肉烧白萝卜</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/17.jpg" title="烫面葱香手抓饼"><img src="image/17.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/17.jpg" title="烫面葱香手抓饼">烫面葱香手抓饼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/18.jpg" title="芝麻红薯饼"><img src="image/18.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/18.jpg" title="芝麻红薯饼">芝麻红薯饼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/19.jpg" title="白菜猪肉包子"><img src="image/19.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/19.jpg" title="白菜猪肉包子">白菜猪肉包子</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/20.jpg" title="咖喱牛腩盖浇饭"><img src="image/20.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/20.jpg" title="咖喱牛腩盖浇饭">咖喱牛腩盖浇饭</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/21.jpg" title="苹果派"><img src="image/21.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/21.jpg" title="苹果派">苹果派</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/22.jpg" title="爆浆巧克力古早味蛋糕"><img src="image/22.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/22.jpg" title="爆浆巧克力古早味蛋糕">爆浆巧克力古早味蛋糕</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/23.jpg" title="黄金椰蓉球"><img src="image/23.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/23.jpg" title="黄金椰蓉球">黄金椰蓉球</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/24.jpg" title="酸奶戚风蛋糕"><img src="image/24.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/24.jpg" title="酸奶戚风蛋糕">酸奶戚风蛋糕</a></center></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="id2">
+                    <div class="container" style="background-color: antiquewhite;">
+                        <div class="row">
+                            <div class="col-xl-4" style="margin-top: 15px;"><div style="overflow: hidden;"><a href="image/1.jpg" title="烩羊杂"><img src="image/1.jpg" alt="" class="img-fluid"></a></div></div>
+                            <div class="col-xl-8" style="margin-top: 15px;">
+                                <h2><a href="image/1.jpg" title="烩羊杂">烩羊杂</a></h2>
+                                <br>
+                                <p>原料：羊杂、面肺、盐、味精、葱花、香菜、葱姜末、羊油辣子。</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-4" style="margin-top: 15px;"><div style="overflow: hidden;"><a href="image/2.jpg" title="皮蛋瘦肉粥"><img src="image/2.jpg" alt="" class="img-fluid"></a></div></div>
+                            <div class="col-xl-8" style="margin-top: 15px;">
+                                <h2><a href="image/2.jpg" title="皮蛋瘦肉粥">皮蛋瘦肉粥</a></h2>
+                                <br>
+                                <p>原料：米、皮蛋、瘦肉、卷心菜、葱、香菜、食用油、盐、鸡精、胡椒粉、辣椒面、料酒、淀粉。</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-4" style="margin-top: 15px;"><div style="overflow: hidden;"><a href="image/3.jpg" title="早餐堅果小麵包（免出膜）"><img src="image/3.jpg" alt="" class="img-fluid"></a></div></div>
+                            <div class="col-xl-8" style="margin-top: 15px;">
+                                <h2><a href="image/3.jpg" title="早餐堅果小麵包（免出膜）">早餐堅果小麵包（免出膜）</a></h2>
+                                <br>
+                                <p>原料：高筋粉、雞蛋、堅果提子乾紅莓乾、雞黃、牛奶、糖、酵母粉、植物油。</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="tab-pane" id="id3">
+                    <div class="container" style="background-color: antiquewhite; text-align: center;">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/33.jpg" title="可乐鸡翅"><img src="image/33.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/33.jpg" title="可乐鸡翅">可乐鸡翅</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/34.jpg" title="番茄炒蛋"><img src="image/34.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/34.jpg" title="番茄炒蛋">番茄炒蛋</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/35.jpg" title="水煮肉片"><img src="image/35.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/35.jpg" title="水煮肉片">水煮肉片</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/36.jpg" title="糖醋排骨"><img src="image/36.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/36.jpg" title="糖醋排骨">糖醋排骨</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/37.jpg" title="红烧排骨"><img src="image/37.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/37.jpg" title="红烧排骨">红烧排骨</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/38.jpg" title="口水鸡"><img src="image/38.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/38.jpg" title="口水鸡">口水鸡</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/39.jpg" title="红烧鱼"><img src="image/39.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/39.jpg" title="红烧鱼">红烧鱼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/40.jpg" title="鱼香肉丝"><img src="image/40.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/40.jpg" title="鱼香肉丝">鱼香肉丝</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/41.jpg" title="麻辣烫"><img src="image/41.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/41.jpg" title="麻辣烫">麻辣烫</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/42.jpg" title="红烧茄子"><img src="image/42.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/42.jpg" title="红烧茄子">红烧茄子</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/43.jpg" title="宫保鸡丁"><img src="image/43.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/43.jpg" title="宫保鸡丁">宫保鸡丁</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/44.jpg" title="麻辣香锅"><img src="image/44.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/44.jpg" title="麻辣香锅">麻辣香锅</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/45.jpg" title="佛跳墙"><img src="image/45.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/45.jpg" title="佛跳墙">佛跳墙</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/46.jpg" title="啤酒鸭"><img src="image/46.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/46.jpg" title="啤酒鸭">啤酒鸭</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/47.jpg" title="麻婆豆腐"><img src="image/47.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/47.jpg" title="麻婆豆腐">麻婆豆腐</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/48.jpg" title="红烧肉"><img src="image/48.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/48.jpg" title="红烧肉">红烧肉</a></center></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="id4">
+                    <div class="container" style="background-color: antiquewhite; text-align: center;">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/51.jpg" title="自制披萨"><img src="image/51.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/51.jpg" title="自制披萨">自制披萨</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/52.jpg" title="手抓饼版桃花酥"><img src="image/52.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/52.jpg" title="手抓饼版桃花酥">手抓饼版桃花酥</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/53.jpg" title="小清新水饺"><img src="image/53.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/53.jpg" title="小清新水饺">小清新水饺</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/54.jpg" title="爱心火腿煎蛋"><img src="image/54.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/54.jpg" title="爱心火腿煎蛋">爱心火腿煎蛋</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/55.jpg" title="鸡蛋网卷饼"><img src="image/55.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/55.jpg" title="鸡蛋网卷饼">鸡蛋网卷饼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/56.jpg" title="网红脏脏包"><img src="image/56.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/56.jpg" title="网红脏脏包">网红脏脏包</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div><a href="image/57.jpg" title="抹茶麻薯夹心软欧"><img src="image/57.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/57.jpg" title="抹茶麻薯夹心软欧">抹茶麻薯夹心软欧</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/58.jpg" title="能拉丝的海绵小蛋糕"><img src="image/58.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/58.jpg" title="能拉丝的海绵小蛋糕">能拉丝的海绵小蛋糕</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/59.jpg" title="爆浆蛋糕"><img src="image/59.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/59.jpg" title="爆浆蛋糕">爆浆蛋糕</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/60.jpg" title="糯米蛋"><img src="image/60.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/60.jpg" title="糯米蛋">糯米蛋</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/61.jpg" title="南瓜豆沙饼"><img src="image/61.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/61.jpg" title="南瓜豆沙饼">南瓜豆沙饼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/62.jpg" title="多味半熟芝士蛋糕"><img src="image/62.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/62.jpg" title="多味半熟芝士蛋糕">多味半熟芝士蛋糕</a></center></h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/63.jpg" title="南瓜玫瑰花馒头"><img src="image/63.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/63.jpg" title="南瓜玫瑰花馒头">南瓜玫瑰花馒头</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/64.jpg" title="日式生吐司"><img src="image/64.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/64.jpg" title="日式生吐司">日式生吐司</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/65.jpg" title="红豆酥饼"><img src="image/65.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/65.jpg" title="红豆酥饼">红豆酥饼</a></center></h5>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div style="overflow: hidden;"><a href="image/66.jpg" title="蔓越莓司康饼"><img src="image/66.jpg" alt="" class="img-fluid"></a></div>
+                                <h5><center><a href="image/66.jpg" title="蔓越莓司康饼">蔓越莓司康饼</a></center></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    <div class="container hh">
+        <nav class="nav nav-pills">
+            <a href="#id5" class="nav-item nav-link active" data-toggle="tab"><h4><svg t="1701520295086" class="icon" style="height: 60px; width:52px; margin-right: 10px; margin-bottom: 8px;"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9206"><path d="M992.601073 742.992617 990.403038 893.425362C990.403038 896.684517 989.815632 899.811032 988.868203 902.729113L988.868203 902.729113C960.217956 1067.619622 137.944497 1067.411188 45.134371 878.645473L44.925937 878.133861 44.925937 878.171758C40.814096 869.322773 37.933912 860.530634 36.304335 851.871135L36.304335 851.871135C34.580014 843.116893 34.1063 834.533188 34.580014 826.138969 30.941888 751.708962 27.625887 666.402472 41.875216 601.257268 50.098898 579.769582 65.049325 560.082012 84.395821 542.952499 102.548557 526.865158 124.528905 512.900057 148.385162 501.777243 214.648333 470.853167 298.988445 459.76825 358.430128 482.79077 426.171288 508.996651 483.604422 539.124887 535.637212 566.410836 612.075768 606.524972 676.254595 640.21554 740.300782 642.603061 778.425317 644.024204 815.261349 640.48082 846.886522 637.411151 860.965314 636.046853 874.191421 634.777299 883.760452 634.151996L883.874143 634.151996C923.381924 631.518144 954.078617 633.659333 972.00397 650.428823 993.264273 670.230085 992.980044 715.990896 992.601073 742.992617L992.601073 742.992617ZM382.532717 420.033086C291.712192 266.663311 486.749885 225.980718 326.8618 87.902444 369.117125 195.871431 189.200395 266.720157 382.532717 420.033086L382.532717 420.033086ZM594.586232 510.285154C434.736044 257.549046 754.720648 212.072463 508.995514-0.113691 596.026324 218.325494 297.415713 274.678559 594.586232 510.285154L594.586232 510.285154ZM743.143068 537.950075C652.303595 384.599249 847.360237 343.897707 687.472152 205.838382 729.670631 313.807368 549.791798 384.637146 743.143068 537.950075L743.143068 537.950075ZM874.911466 698.425566 838.454406 753.622768C865.664561 744.337966 888.17547 733.973095 904.603885 722.793435 918.834266 713.148609 926.678976 704.640699 926.300005 698.10344 926.110519 695.374845 911.160093 695.905405 887.985984 697.44024L887.985984 697.44024C883.476223 697.724468 879.11805 698.065543 874.911466 698.425566L874.911466 698.425566ZM708.069254 784.224718 759.514638 706.251328C752.522614 706.270276 745.341103 706.156585 738.045901 705.872356 716.690856 705.076516 695.847423 701.760515 675.212423 696.454914L609.877733 795.461224C643.340918 792.997909 675.970366 789.26504 706.818648 784.433153L708.069254 784.224718 708.069254 784.224718ZM497.493728 798.815122 586.912059 663.313854C563.112647 652.153143 538.687932 639.476546 513.107355 626.004108L402.561362 793.528469C408.018552 794.077978 413.475742 794.589589 419.046623 795.044355 444.892481 797.185544 471.155207 798.43615 497.493728 798.815122L497.493728 798.815122ZM302.531829 778.047482 430.718946 583.78668C407.10902 572.228049 382.191643 560.745212 355.758379 549.868729L221.109797 753.888048C245.913483 763.627616 273.313124 771.642864 302.531829 778.047482L302.531829 778.047482ZM141.071012 708.184082 254.933006 535.638349C228.007079 539.333321 200.228467 547.651746 175.216346 559.324069 156.248821 568.173054 139.384589 578.708462 126.253226 590.361836 114.296674 600.991988 105.2961 612.417979 100.786339 624.071353 96.65555 634.909939 96.579755 646.639107 102.264328 658.804093 110.88593 677.297903 124.074139 693.726319 141.071012 708.184082Z" p-id="9207" fill="#d81e06"></path></svg>肉食精选</h4></a>
+            <a href="#id6" class="nav-item nav-link" data-toggle="tab"><h4><svg t="1701520123178" class="icon" style="height: 60px; width:52px;"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6161"><path d="M330.728186 332.442791a29.767442 29.767442 0 0 0-10.621023 35.649488l3.595907 8.406326c2.476651 5.524837 5.715349 12.430884 9.716093 20.384744a517.953488 517.953488 0 0 0 36.602046 62.249674c34.339721 49.675907 72.537302 83.872744 116.402605 94.708093 75.490233 18.693953 218.850233-52.34307 309.462326-203.228279a29.767442 29.767442 0 0 0-23.718698-45.032186l-72.94214-4.334139c-36.98307-2.143256-74.680558-4.310326-112.163721-6.429768l-122.427534-6.644093c-49.27107-2.571907-90.135814 13.931163-133.905861 44.246326z m124.165954 15.00279l7.382325 0.23814 65.631256 3.500651 55.843721 3.095814 132.977116 7.620465-2.262325 3.095814c-37.864186 49.914047-80.729302 85.253953-125.737675 107.567628-38.388093 19.027349-76.657116 26.314419-87.992558 23.504372-26.528744-6.572651-54.914977-31.958326-81.753302-70.77507l-7.072745-10.621023a474.993116 474.993116 0 0 1-25.266604-44.460651l-1.071628-2.143256 5.429581-3.000558c21.480186-11.478326 41.984-17.550884 63.892838-17.622326z" fill="#5AC2EE" p-id="6162"></path><path d="M443.249116 654.693209a29.767442 29.767442 0 0 1-30.243721 33.958698c-78.633674-2.048-136.43014-28.933953-174.913488-72.82307-24.576-28.005209-36.506791-56.272372-40.650419-77.46679-12.811907-76.109395 25.099907-131.500651 87.611535-167.578791l5.739163-3.214884 28.529116 52.247814c-46.08 25.147535-71.322791 60.17786-63.297488 107.877209 0.381023 2.024186 1.833674 6.92986 4.715163 13.764465 5.024744 11.906977 12.288 23.909209 22.099349 35.125582 21.527814 24.528372 52.009674 41.86493 93.993674 49.009116l6.429767 1.000186 0.547721-4.167442c3.738791-25.004651 15.12186-51.342884 36.98307-76.538046l4.858047-5.35814a223.779721 223.779721 0 0 1 45.175069-36.62586l7.787163-4.691349 29.910326 51.461953c-16.288744 9.45414-29.291163 19.69414-39.388279 30.481861-13.407256 14.359814-21.242047 29.148279-24.837954 43.984372a73.108837 73.108837 0 0 0-2.119442 21.980279l0.476279 4.572279 0.595349 3.000558z" fill="#5AC2EE" p-id="6163"></path><path d="M237.186977 613.49507c0.095256 28.719628 7.858605 58.844279 25.385674 90.254883l4.286512 7.358512 5.643907 2.071814 6.525023 2.119442c30.83907 9.33507 65.250233 11.430698 101.757023 2.524279l5.548651-1.476465-2.95293-6.834605a135.382326 135.382326 0 0 1-10.287628-42.388837l-0.238139-7.144186h59.534883c0 10.716279 3.834047 23.43293 10.47814 36.506791 4.167442 8.263442 8.334884 14.597953 10.716279 17.693767a29.767442 29.767442 0 0 1-11.573581 45.365582c-64.464372 28.505302-126.356837 29.053023-180.247814 12.716651a170.079256 170.079256 0 0 1-29.386419-11.50214 29.767442 29.767442 0 0 1-10.954418-10.073302c-28.243349-43.579535-41.984-87.063814-43.579535-129.166884l-0.166698-7.858605 59.534884-0.166697z" fill="#5AC2EE" p-id="6164"></path><path d="M395.549767 718.562233a29.767442 29.767442 0 0 1 42.126884 0.309581l3.738791 3.619721a278.813767 278.813767 0 0 0 24.623628 20.527628c9.358884 6.906047 18.408186 12.478512 26.624 16.26493 22.718512 10.47814 23.147163 42.626977 0.714418 53.724279l-18.07479 8.525395c-13.740651 6.310698-28.267163 12.621395-42.984186 18.55107-10.716279 4.286512-21.146791 8.239628-31.172465 11.740279-20.289488 7.04893-38.340465 12.073674-53.867163 14.621768a29.767442 29.767442 0 0 1-19.241675-3.333954c-17.64614-9.763721-41.960186-30.410419-65.607442-64.464372-9.049302-13.07386-17.384186-27.362233-24.742697-42.936558a29.767442 29.767442 0 1 1 53.819535-25.48093c5.953488 12.597581 12.621395 24.052093 19.837023 34.45879a197.060465 197.060465 0 0 0 28.243349 32.791814l6.096372 5.310512 3.19107 2.571907 3.214883-0.738233c7.001302-1.786047 14.740837-4.072186 23.099535-6.858418l6.405954-2.16707c6.048744-2.119442 12.311814-4.429395 18.741581-6.906046l9.763721-3.857861 8.287256-3.429209-1.952744-1.571721c-7.334698-6.02493-13.573953-11.716465-18.432-16.431628l-2.762419-2.762419a29.767442 29.767442 0 0 1 0.333395-42.079255z" fill="#5AC2EE" p-id="6165"></path><path d="M437.938605 782.526512a29.767442 29.767442 0 0 1 36.673488-15.71721l6.001116 2.429024c2.667163 1.047814 6.38214 2.357581 10.906791 3.691162 12.145116 3.572093 24.528372 5.572465 35.863814 5.23907a29.767442 29.767442 0 0 1 28.862512 39.793116l-4.858047 13.026233c-3.738791 9.644651-7.668093 19.33693-11.668837 28.43386-3.000558 6.834605-5.953488 13.097674-8.811163 18.693954-5.00093 9.882791-9.716093 17.622326-14.717023 23.528186a29.767442 29.767442 0 0 1-24.052093 10.549581c-11.668837-0.500093-20.003721-1.119256-32.386977-2.762418a284.672 284.672 0 0 1-55.629395-12.859535c-26.671628-9.287442-49.485395-22.504186-67.036279-40.745675a29.767442 29.767442 0 0 1 42.88893-41.269581c10.335256 10.716279 25.218977 19.360744 43.650977 25.766698 13.693023 4.762791 28.624372 8.025302 44.008186 10.097116l5.78679 0.714419 4.191256 0.428651 3.429209-6.906047 4.167442-9.192186 1.024-2.429023-3.905488-0.90493-7.620465-2.095628a170.674605 170.674605 0 0 1-22.146977-8.025302 29.767442 29.767442 0 0 1-14.621767-39.483535z" fill="#5AC2EE" p-id="6166"></path><path d="M679.721674 705.77414c16.312558-18.574884 46.842047-10.311442 51.581024 13.931162l0.619162 3.619721c0.214326 1.428837 0.428651 3.119628 0.642977 5.024744 2.738605 24.409302 0.952558 51.414326-8.97786 77.776373a128.190512 128.190512 0 0 1-33.101396 49.675907l-3.786418 3.286325 2.143256 2.357581c16.479256 19.051163 25.861953 43.103256 28.981581 70.179721l0.571535 5.834419a198.870326 198.870326 0 0 1-3.810233 56.986791l-1.643162 7.04893-0.952559 3.381581-1.238325 3.214884-3.929303 6.429768-34.839813-8.930233-11.144931 9.382698c-14.836093-17.669953-34.196837-34.958884-57.082046-51.55721l-8.739721-6.191628a599.921116 599.921116 0 0 0-72.561116-42.555534c-6.501209-3.262512-12.645209-6.191628-18.336745-8.811163l-5.548651-2.500465c-4.21507-1.905116-7.144186-3.119628-8.573023-3.691163a29.767442 29.767442 0 0 1 7.787163-57.201116l1.000186-0.071442-0.666791-0.833489a29.624558 29.624558 0 0 1-2.857674-5.191442l-1.047814-2.857674a29.767442 29.767442 0 0 1 16.717395-36.221023l2.857675-1.047814c1.333581-0.428651 4.024558-1.285953 7.882418-2.619535 6.572651-2.238512 13.907349-4.905674 21.837395-7.930047 22.623256-8.644465 45.198884-18.598698 66.107535-29.600744 28.43386-14.978977 51.247628-30.624744 66.226605-46.103814l3.881674-4.215069z m-17.717581 91.612279l2.095628-3.786419-0.476279 0.309581c-8.287256 5.048558-17.050791 10.00186-26.290605 14.859907-23.194791 12.216558-47.866047 23.099535-72.537302 32.529861l-12.454698 4.643721-16.098232 5.596279-4.596093 1.476465 7.025116 3.310139 10.406698 5.072373a658.455814 658.455814 0 0 1 79.776744 46.86586c6.858419 4.715163 13.478698 9.525581 19.860837 14.407442l8.477767 6.644093-0.238139-1.26214c-4.048372-17.860465-13.097674-31.196279-28.624372-39.864558l-4.048372-2.071814-0.381024-0.071442c-24.194977-5.381953-33.291907-42.555535-6.739348-55.772279l3.000558-1.333581 1.166883-0.404837c19.289302-6.667907 32.267907-17.146047 40.674233-31.148651zM770.048 294.459535l-2.452837-3.262512-1.976558-1.92893a124.118326 124.118326 0 0 0-17.217489-13.812093c-23.599628-16.217302-58.534698-32.910884-106.853209-48.747163-64.321488-21.099163-146.693953-38.769116-249.165395-51.676279a29.767442 29.767442 0 0 1 7.453767-59.082418c106.091163 13.383442 192.130977 31.839256 260.262698 54.176744 53.462326 17.550884 93.469767 36.649674 121.998883 56.224744 18.717767 12.859535 29.81507 23.933023 33.839628 30.172279 20.789581 26.790698 28.43386 51.08093 19.027349 73.251721-8.239628 19.360744-25.290419 28.767256-46.627721 32.744186-8.525395 1.595535-17.050791 2.143256-25.052279 2.048l-9.192186-0.404837a29.767442 29.767442 0 0 1 2.238512-59.415814l4.048372 0.190511c4.048372 0.214326 8.620651 0.11907 12.907163-0.333395l3.143442-0.476279-0.904931-1.547907a112.782884 112.782884 0 0 0-5.477209-8.096744z" fill="#5AC2EE" p-id="6167"></path><path d="M416.744186 43.484279A29.767442 29.767442 0 0 1 453.75107 23.337674C607.160558 68.512744 712.418233 115.259535 778.47814 161.339535c38.769116 27.052651 59.201488 50.199814 67.155348 67.584l1.119256 2.690977 1.190698 2.381395c16.836465 34.982698 9.787535 70.060651-15.860093 96.01786l-3.453023 3.333954a29.767442 29.767442 0 0 1-42.626977-41.436279l2.262325-2.333768c9.477953-8.739721 11.811721-17.217488 6.50121-28.838697l-1.500279-2.976744-2.071814-4.786605c0.23814 0.666791-0.976372-1.500279-4.881861-6.286884-8.406326-10.335256-21.980279-22.623256-41.912558-36.530604-60.201674-42.031628-159.791628-86.206512-307.485767-129.714605A29.767442 29.767442 0 0 1 416.744186 43.484279zM434.080744 551.936c25.147535-4.072186 52.533581-2.786233 79.157582 8.049116a123.832558 123.832558 0 0 1 28.743441 16.455442 29.767442 29.767442 0 0 1-33.530046 49.080558l-2.690977-1.833674a64.345302 64.345302 0 0 0-14.978977-8.573023c-15.002791-6.096372-31.86307-6.906047-47.151627-4.405582l-4.834233 0.952558a29.767442 29.767442 0 0 1-15.955349-57.367814l4.691349-1.119255a136.692093 136.692093 0 0 1 6.548837-1.238326z" fill="#5AC2EE" p-id="6168"></path><path d="M412.838698 625.235349c29.291163-13.002419 64.345302-13.812093 101.733209 4.477023a29.767442 29.767442 0 1 1-26.195349 53.462326c-20.646698-10.12093-37.459349-9.716093-51.390511-3.524465l-3.19107 1.547907a20.075163 20.075163 0 0 0-2.095628 1.190697 29.767442 29.767442 0 1 1-37.435535-46.270511c4.048372-3.262512 10.24-7.191814 18.574884-10.882977z" fill="#5AC2EE" p-id="6169"></path><path d="M421.935628 686.532465c26.004837-8.334884 56.343814-7.382326 87.778232 8.573023a29.767442 29.767442 0 0 1-26.957395 53.105117c-16.431628-8.358698-30.72-8.811163-42.626977-5.000931l-3.095814 1.119256a29.767442 29.767442 0 1 1-29.624558-51.652465 77.395349 77.395349 0 0 1 14.526512-6.144zM594.277209 355.875721a37.459349 37.459349 0 1 0-0.142883 74.918698 37.459349 37.459349 0 0 0 0.142883-74.918698z m-0.071442 15.36a22.099349 22.099349 0 0 1 2.52428 44.008186l-2.595721 0.166698a22.146977 22.146977 0 0 1-22.027907-22.099349 22.146977 22.146977 0 0 1 22.099348-22.075535z" fill="#5AC2EE" p-id="6170"></path></svg>水产海鲜</h4></li></a>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane active" id="id5">
+                <div class="container" style="background-color: antiquewhite; text-align: center;">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/71.jpg" title="黑椒牛肉粒"><img src="image/71.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/71.jpg" title="黑椒牛肉粒">黑椒牛肉粒</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/72.jpg" title="香菇炖肥肠"><img src="image/72.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/72.jpg" title="香菇炖肥肠">香菇炖肥肠</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/73.jpg" title="西红柿炖牛肉"><img src="image/73.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/73.jpg" title="西红柿炖牛肉">西红柿炖牛肉</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/74.jpg" title="萝卜排骨汤"><img src="image/74.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/74.jpg" title="萝卜排骨汤">萝卜排骨汤</a></center></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/67.jpg" title="番茄土豆牛肉锅"><img src="image/67.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/67.jpg" title="番茄土豆牛肉锅">番茄土豆牛肉锅</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/68.jpg" title="香芋蒸排骨"><img src="image/68.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/68.jpg" title="香芋蒸排骨">香芋蒸排骨</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/69.jpg" title="腐乳红烧猪蹄"><img src="image/69.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/69.jpg" title="腐乳红烧猪蹄">腐乳红烧猪蹄</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/70.jpg" title="糖醋猪肝"><img src="image/70.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/70.jpg" title="糖醋猪肝">糖醋猪肝</a></center></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="id6">
+                <div class="container" style="background-color: antiquewhite; text-align: center;">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/75.jpg" title="金银翡翠虾仁"><img src="image/75.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/75.jpg" title="金银翡翠虾仁">金银翡翠虾仁</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/76.jpg" title="爆炒鲜虾"><img src="image/76.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/76.jpg" title="爆炒鲜虾">爆炒鲜虾</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/77.jpg" title="红烧开背黑虎虾"><img src="image/77.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/77.jpg" title="红烧开背黑虎虾">红烧开背黑虎虾</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/78.jpg" title="富贵牡丹香酥草鱼片"><img src="image/78.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/78.jpg" title="富贵牡丹香酥草鱼片">富贵牡丹香酥草鱼片</a></center></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/79.jpg" title="清蒸鲈鱼"><img src="image/79.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/79.jpg" title="清蒸鲈鱼">清蒸鲈鱼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/80.jpg" title="清蒸鲳鱼"><img src="image/80.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/80.jpg" title="清蒸鲳鱼">清蒸鲳鱼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image81.jpg" title="白灼墨鱼"><img src="image/81.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/81.jpg" title="白灼墨鱼">白灼墨鱼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/82.jpg" title="红烧鲫鱼"><img src="image/82.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/82.jpg" title="红烧鲫鱼">红烧鲫鱼</a></center></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container hh">
+        <nav class="nav nav-pills">
+            <a href="#id7" class="nav-item nav-link active" data-toggle="tab"><h4><svg t="1701520641027" class="icon" style="height: 60px; width:52px;margin-right: 10px; margin-bottom: 8px;"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11321"><path d="M743.291979 365.778633a55.69809 55.69809 0 0 1 29.663434 44.568213 54.723921 54.723921 0 0 1 22.405878-4.700363 55.771152 55.771152 0 0 1 55.722444 55.722444c0 1.753503 0 3.40959-0.243543 5.163093 1.534316 0 3.044277-0.243542 4.578593-0.243542a55.771152 55.771152 0 0 1 55.722444 55.722444H110.983497A55.771152 55.771152 0 0 1 166.705941 466.288478c1.534316 0 3.044277 0 4.578592 0.243542 0-1.753503-0.243542-3.40959-0.243542-5.163093a55.771152 55.771152 0 0 1 55.722444-55.722444 57.159342 57.159342 0 0 1 22.405877 4.700363 55.600673 55.600673 0 0 1 55.478902-50.900309 56.16082 56.16082 0 0 1 28.859745 8.0856 55.649381 55.649381 0 0 1 89.014655-25.328384 55.673735 55.673735 0 0 1 88.673697-14.612529 55.673735 55.673735 0 0 1 88.673696 14.612529 55.625027 55.625027 0 0 1 89.014656 25.450155 55.576318 55.576318 0 0 1 54.43167-1.875275z" fill="#F2F2F2" p-id="11322"></path><path d="M611.584385 334.434758a54.821338 54.821338 0 0 1 12.177107 7.866412 54.796984 54.796984 0 0 1 9.376373-13.126922 53.116543 53.116543 0 0 0-21.55348 5.26051z m-243.542149 131.829366c1.534316 0 3.044277 0 4.578592 0.243542 0-1.753503-0.243542-3.40959-0.243542-5.163094a55.771152 55.771152 0 0 1 55.722444-55.722443 57.159342 57.159342 0 0 1 22.405877 4.700363 55.600673 55.600673 0 0 1 55.478902-50.900309 56.16082 56.16082 0 0 1 28.859745 8.085599 55.795506 55.795506 0 0 1 53.019126-38.577076h2.581546a55.673735 55.673735 0 0 0-79.39474-1.290774 55.673735 55.673735 0 0 0-88.673697 14.612529 55.089234 55.089234 0 0 0-35.99553-13.248693 55.795506 55.795506 0 0 0-53.019126 38.577077 55.06488 55.06488 0 0 0-28.859744-8.085599 55.673735 55.673735 0 0 0-55.478902 50.900309 54.723921 54.723921 0 0 0-22.405878-4.700364A55.771152 55.771152 0 0 0 170.894866 461.417635c0 1.753503 0 3.40959 0.243542 5.163094-1.534316 0-3.044277-0.243542-4.578593-0.243543a55.771152 55.771152 0 0 0-55.722443 55.722444h201.263232a56.014694 56.014694 0 0 1 55.868569-55.771152z" fill="#E6E6E6" p-id="11323"></path><path d="M880.868939 902.472467v6.088554a93.812436 93.812436 0 0 1-93.83679 93.83679H234.946451a93.812436 93.812436 0 0 1-93.83679-93.83679v-6.088554h739.734924z" fill="#E6E6E6" p-id="11324"></path><path d="M306.718322 908.585375v-6.088553h-165.608661v6.088553a93.812436 93.812436 0 0 0 93.83679 93.836791h165.608661a93.739373 93.739373 0 0 1-93.83679-93.836791z" fill="#CCCCCC" p-id="11325"></path><path d="M910.873332 521.986568h39.86785a439.569225 439.569225 0 0 1-219.187934 380.485899H290.206165a439.4231 439.4231 0 0 1-219.187935-380.485899z" fill="#2BA5F7" p-id="11326"></path><path d="M293.834943 521.986568H71.066939a439.4231 439.4231 0 0 0 219.187934 380.485899h222.621879a439.569225 439.569225 0 0 1-219.041809-380.485899z" fill="#2197D8" p-id="11327"></path><path d="M698.675057 867.18321a21.456063 21.456063 0 0 1-10.788917-39.989621 355.108808 355.108808 0 0 0 152.822699-180.513441 21.456063 21.456063 0 1 1 40.111392 15.245739 397.850455 397.850455 0 0 1-171.356256 202.334817 21.358646 21.358646 0 0 1-10.788918 2.922506z" fill="#FFFFFF" p-id="11328"></path><path d="M857.537601 588.15697a21.456063 21.456063 0 1 0 21.456064-21.456064 21.456063 21.456063 0 0 0-21.480418 21.456064z" fill="#FFFFFF" p-id="11329"></path><path d="M908.900641 755.49478a460.294662 460.294662 0 0 0 63.320959-233.532567 21.480418 21.480418 0 0 0-21.456064-21.456063h-21.456063a77.422049 77.422049 0 0 0-58.255282-54.163774 77.154153 77.154153 0 0 0-75.644192-62.151956c-2.435421 0-4.870843 0-7.160139 0.340959a77.008028 77.008028 0 0 0-15.952011-23.453109l171.72157-255.110402a21.383001 21.383001 0 0 0-35.5328-23.818422l-173.596844 257.911136a76.228693 76.228693 0 0 0-17.242784-1.997046 77.568175 77.568175 0 0 0-18.7771 2.435422 77.933488 77.933488 0 0 0-11.251647-12.785963l128.200587-296.634338a21.431709 21.431709 0 1 0-39.283348-17.04795l-127.494316 294.686a83.364478 83.364478 0 0 0-13.370464-1.169002 76.496589 76.496589 0 0 0-30.369706 6.210325 77.397695 77.397695 0 0 0-94.421291-12.785963 77.397695 77.397695 0 0 0-94.421291 12.785963 77.129799 77.129799 0 0 0-93.471477 26.619157 76.861902 76.861902 0 0 0-89.50174 44.227254 71.382204 71.382204 0 0 0-7.160139-0.340959 77.154153 77.154153 0 0 0-75.644192 62.151957 77.25157 77.25157 0 0 0-58.30399 54.066357h-21.577835a21.480418 21.480418 0 0 0-21.456063 21.456063 460.002412 460.002412 0 0 0 171.818986 359.151608h-80.368909a21.480418 21.480418 0 0 0-21.456063 21.456063v6.088554a115.438979 115.438979 0 0 0 115.292853 115.292853H786.715544a115.438979 115.438979 0 0 0 115.292854-115.292853v-6.088554a21.480418 21.480418 0 0 0-21.456063-21.456063h-80.36891a458.443742 458.443742 0 0 0 108.960758-125.740812z m-742.219055-267.896364h2.825089a21.480418 21.480418 0 0 0 23.11215-23.331338v-3.166048a34.290735 34.290735 0 0 1 34.242027-34.242026 32.805128 32.805128 0 0 1 13.711423 2.922506 21.456063 21.456063 0 0 0 30.028747-17.827285 34.388151 34.388151 0 0 1 34.0959-31.319521 34.095901 34.095901 0 0 1 17.705515 5.041323 21.334292 21.334292 0 0 0 18.655328 1.753503 21.650897 21.650897 0 0 0 12.907734-13.492235 34.095901 34.095901 0 0 1 32.610294-23.696651 33.487046 33.487046 0 0 1 22.162336 8.20737 21.456063 21.456063 0 0 0 18.070827 4.700364 21.212521 21.212521 0 0 0 14.90478-11.251647 34.095901 34.095901 0 0 1 54.529087-8.913643 21.383001 21.383001 0 0 0 30.028747 0 34.095901 34.095901 0 0 1 54.529087 8.913643 21.431709 21.431709 0 0 0 32.951253 6.575638 34.217672 34.217672 0 0 1 17.364555-7.866412l-25.693697 59.229451a21.431709 21.431709 0 0 0 11.154231 28.153472 21.918793 21.918793 0 0 0 8.450913 1.753504 21.431709 21.431709 0 0 0 19.702559-12.907734l23.331338-54.066357a8.061245 8.061245 0 0 0 0.46273 1.169002 21.358646 21.358646 0 0 0 12.907734 13.492235 21.772668 21.772668 0 0 0 18.655329-1.753503 41.572645 41.572645 0 0 1 6.088554-2.922506l-38.47966 57.110634a21.431709 21.431709 0 0 0 35.654571 23.818422l44.227254-65.75638a33.535754 33.535754 0 0 1 4.33505 13.954965 21.456063 21.456063 0 0 0 30.028747 17.827285 34.753465 34.753465 0 0 1 13.711423-2.922506 34.290735 34.290735 0 0 1 34.242027 34.242027 30.832436 30.832436 0 0 1 0 3.166048 21.236875 21.236875 0 0 0 6.088553 17.04795 21.918793 21.918793 0 0 0 17.047951 6.332096 22.600711 22.600711 0 0 1 2.825089 0 34.290735 34.290735 0 0 1 26.789636 12.907734H139.940658a34.290735 34.290735 0 0 1 26.789637-12.907734z m620.228792 493.440749H234.946451a72.57556 72.57556 0 0 1-70.846411-57.110634h693.656749a72.57556 72.57556 0 0 1-70.846411 57.110634z m-61.226496-99.852281H296.294718a421.815003 421.815003 0 0 1-146.271415-147.318646 416.94416 416.94416 0 0 1-56.891446-190.352544H928.94416a417.553015 417.553015 0 0 1-203.138507 337.67119z" fill="#333333" p-id="11330"></path></svg>主食精选</h4></a>
+            <a href="#id8" class="nav-item nav-link" data-toggle="tab"><h4><svg t="1701520795023" class="icon" style="height: 60px; width:52px;margin-right: 10px; margin-bottom: 8px;"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13108"><path d="M116.5 817.5l-15.8-10.1L556.4 95.5l26.1-23.4-10.4 33.5z" fill="#FFFFFF" p-id="13109"></path><path d="M116.5 824.9c-1.4 0-2.8-0.4-4-1.2l-15.7-10.1c-3.5-2.2-4.5-6.8-2.3-10.3L550.1 91.5c0.4-0.6 0.8-1.1 1.3-1.5l26.1-23.4c2.5-2.2 6.2-2.5 9-0.7s4.1 5.3 3.1 8.5l-10.3 33.5c-0.2 0.6-0.5 1.3-0.8 1.8L122.8 821.5c-1.1 1.7-2.8 2.8-4.7 3.3-0.5 0.1-1.1 0.1-1.6 0.1z m-5.5-19.8l3.2 2 451.1-704.7 2.1-6.8-5.3 4.7L111 805.1z" fill="#232323" p-id="13110"></path><path d="M257.4 685.7c-49.5 0-89.1-62.5-71.2-134.7C225 394.1 320.5 256.7 454 165.5c61.4-42 133.7-26.7 151 19.7 17.6 46.6-7.8 99.9-49.5 128.9-97 66.2-166.4 166.1-194.6 280.1-12.6 49.3-53.6 91.7-103.5 91.5z" fill="#ED5D45" p-id="13111"></path><path d="M257.4 685.7c-49.5 0-89.1-62.5-71.2-134.7C225 394.1 320.5 256.7 454 165.5c61.4-42 133.7-26.7 151 19.7 17.6 46.6-7.8 99.9-49.5 128.9-97 66.2-166.4 166.1-194.6 280.1-12.6 49.3-53.6 91.7-103.5 91.5z" fill="#FF7B7B" p-id="13112"></path><path d="M420.3 340c-2.8 0-5.5-0.8-8-2.4-28.9-18.5-49.3-47.1-57.6-80.6-2-8 2.9-16.1 10.9-18.1s16.1 2.9 18.1 10.9c6.4 26.1 22.3 48.3 44.7 62.6 6.9 4.4 9 13.7 4.5 20.6-2.9 4.6-7.7 7-12.6 7zM350.4 424.5c-2.8 0-5.5-0.8-8-2.4-28.8-18.5-49.3-47.1-57.6-80.6-2-8 2.9-16.1 10.9-18.1s16.1 2.9 18.1 10.9c6.4 26.1 22.3 48.3 44.7 62.6 6.9 4.4 9 13.7 4.5 20.6-2.8 4.6-7.7 7-12.6 7zM291.8 516.1c-2.8 0-5.5-0.8-8-2.4-28.9-18.5-49.3-47.1-57.6-80.6-2-8 2.9-16.1 10.9-18.1s16.1 2.9 18.1 10.9c6.4 26.1 22.3 48.3 44.7 62.6 6.9 4.4 9 13.7 4.5 20.6-2.9 4.6-7.7 7-12.6 7z" fill="#EA3934" p-id="13113"></path><path d="M242.3 951.9l-11.7-14.6L891 409.8l32.3-13.8-20.6 28.4z" fill="#FFFFFF" p-id="13114"></path><path d="M242.3 959.3h-0.8c-2-0.2-3.8-1.2-5-2.8l-11.7-14.6c-2.6-3.2-2-7.9 1.2-10.5L886.4 404c0.5-0.4 1.1-0.8 1.7-1l32.2-13.8c3.1-1.3 6.7-0.4 8.8 2.2 2.1 2.6 2.2 6.3 0.2 9l-20.6 28.4c-0.4 0.5-0.9 1-1.4 1.5L247 957.7c-1.4 1.1-3 1.6-4.7 1.6z m-1.2-20.9l2.4 3 653.8-522.2 4.2-5.8-6.5 2.8-653.9 522.2z" fill="#232323" p-id="13115"></path><path d="M476.2 753.1m-115.8 0a115.8 115.8 0 1 0 231.6 0 115.8 115.8 0 1 0-231.6 0Z" fill="#FFE092" p-id="13116"></path><path d="M476.4 885.5c-5 0-10-0.3-15-0.8-35.1-3.9-66.7-21.3-88.7-48.9-22.1-27.6-32.1-62.2-28.1-97.3 3.9-35.1 21.3-66.7 48.9-88.7 27.6-22.1 62.2-32.1 97.4-28.1 35.1 3.9 66.7 21.3 88.7 48.9 22.1 27.6 32.1 62.2 28.1 97.3-3.9 35.1-21.3 66.7-48.9 88.7-23.7 18.9-52.5 28.9-82.4 28.9z m-0.4-231.6c-22.4 0-44 7.5-61.8 21.7-20.7 16.5-33.7 40.2-36.7 66.5-2.9 26.3 4.5 52.3 21.1 73 16.5 20.7 40.2 33.7 66.5 36.7 26.4 3 52.3-4.5 73-21.1 20.7-16.5 33.8-40.2 36.7-66.5 2.9-26.3-4.5-52.3-21.1-73-16.5-20.7-40.2-33.7-66.5-36.7-3.8-0.4-7.5-0.6-11.2-0.6z" fill="#232323" p-id="13117"></path><path d="M622.5 636.2m-115.8 0a115.8 115.8 0 1 0 231.6 0 115.8 115.8 0 1 0-231.6 0Z" fill="#FFE092" p-id="13118"></path><path d="M622.7 768.7c-5 0-10-0.3-15-0.8C572.6 764 541 746.6 519 719c-45.6-57-36.2-140.5 20.8-186.1 57-45.6 140.5-36.2 186.1 20.8 45.6 57 36.2 140.5-20.8 186.1-23.7 18.8-52.5 28.9-82.4 28.9z m-0.3-231.7c-21.7 0-43.6 7.1-61.8 21.7-42.8 34.2-49.8 96.7-15.6 139.5 16.5 20.7 40.2 33.7 66.5 36.7 26.3 2.9 52.3-4.5 73-21.1 42.8-34.2 49.8-96.7 15.6-139.5-19.6-24.5-48.5-37.3-77.7-37.3z" fill="" p-id="13119"></path><path d="M768.8 519.4m-115.8 0a115.8 115.8 0 1 0 231.6 0 115.8 115.8 0 1 0-231.6 0Z" fill="#FFE092" p-id="13120"></path><path d="M769 651.7c-38.9 0-77.5-17-103.6-49.7-45.6-57-36.2-140.5 20.8-186.1 27.6-22.1 62.2-32.1 97.4-28.1 35.1 3.9 66.7 21.3 88.7 48.9 45.6 57 36.2 140.5-20.8 186.1-24.4 19.5-53.6 28.9-82.5 28.9z m-0.4-231.6c-22.4 0-44 7.5-61.8 21.7C664 476 657 538.5 691.2 581.3c19.6 24.5 48.5 37.3 77.7 37.3 21.7 0 43.6-7.1 61.8-21.7 42.8-34.2 49.8-96.7 15.6-139.5-16.5-20.7-40.2-33.7-66.5-36.7-3.7-0.4-7.4-0.6-11.2-0.6z" fill="" p-id="13121"></path><path d="M387.3 802.9s-1.6-18.7 6.7-18.7 64.6 9.5 84.5 22.1c19.9 12.7 24.7 10.8 32.9 3.7 8.2-7.1-0.9-59.2-3.8-70.1s-9.4-35.6-0.1-43.9 4.7-42 4.7-42-58.5-38.9-116.7 17.5c-58.1 56.4-21.8 137.2-21.8 137.2l13.6-5.8zM519.1 658.3s3.9-12.7 12.7-12.5 42 38 56.1 36.1c14.1-1.9 30.3-17.4 35.5-38.3 5.2-20.9 4-35.6 13.5-45.7 9.4-10 31.5-20.8 31.5-20.8l-16-58S575.2 520.9 542 556c-33.4 35.2-22.9 102.3-22.9 102.3z" fill="#DE7408" p-id="13122"></path><path d="M670.5 558s45 35.6 75.9 33c30.8-2.6 30.3-18.8 31.1-34.4 0.8-15.6-21.7-37.1-3.6-42.5 18.2-5.4 91.9 18.1 96.1 38.5 0 0 17.4-52.6 8.5-76.3-8.9-23.7-85.8-119.8-169.7-58.3-75.6 55.4-38.3 140-38.3 140z" fill="#DE7408" p-id="13123"></path><path d="M476.4 885.5c-5 0-10-0.3-15-0.8-35.1-3.9-66.7-21.3-88.7-48.9-22.1-27.6-32.1-62.2-28.1-97.3 3.9-35.1 21.3-66.7 48.9-88.7 32.9-26.3 76.8-35.4 117.5-24.3l-8.7 32c-30.5-8.3-63.4-1.5-88.1 18.2-20.7 16.5-33.7 40.2-36.7 66.5-2.9 26.3 4.5 52.3 21.1 73 16.5 20.7 40.2 33.7 66.5 36.7 26.3 2.9 52.3-4.5 73-21.1 24.7-19.7 38.6-50.4 37.2-82l33.1-1.4c1.8 42.1-16.7 83-49.6 109.3-23.7 18.8-52.5 28.8-82.4 28.8z" fill="" p-id="13124"></path><path d="M622.7 768.7c-5 0-10-0.3-15-0.8C572.6 764 541 746.6 519 719c-45.6-57-36.2-140.5 20.8-186.1 32.9-26.3 76.8-35.4 117.5-24.3l-8.7 32c-30.5-8.3-63.4-1.5-88.1 18.2-42.8 34.2-49.8 96.7-15.6 139.5 16.5 20.7 40.2 33.7 66.5 36.7 26.3 2.9 52.3-4.5 73-21.1 24.7-19.7 38.6-50.4 37.2-82l33.1-1.5c1.9 42.2-16.7 83-49.6 109.4-23.7 18.8-52.5 28.9-82.4 28.9z" fill="#232323" p-id="13125"></path><path d="M769 651.7c-38.9 0-77.5-17-103.6-49.7-45.6-57-36.2-140.5 20.8-186.1 27.6-22.1 62.2-32.1 97.4-28.1 35.1 3.9 66.7 21.3 88.7 48.9 45.6 57 36.2 140.5-20.8 186.1-24.4 19.5-53.6 28.9-82.5 28.9z m-0.4-231.6c-22.4 0-44 7.5-61.8 21.7C664 476 657 538.5 691.2 581.3c19.6 24.5 48.5 37.3 77.7 37.3 21.7 0 43.6-7.1 61.8-21.7 42.8-34.2 49.8-96.7 15.6-139.5-16.5-20.7-40.2-33.7-66.5-36.7-3.7-0.4-7.4-0.6-11.2-0.6z" fill="#232323" p-id="13126"></path><path d="M257.9 702.2h-0.5c-25.1 0-48.4-12.3-65.8-34.5-24.4-31.2-32.4-76.3-21.4-120.7 39.9-161.2 137.4-301.5 274.5-395.1 37.7-25.8 82.8-34.1 120.6-22.1 26.9 8.5 46.6 26.2 55.3 49.7 9.9 26.1 8.9 54.8-2.7 83.1-10.5 25.6-29.3 48.8-52.9 65.1-94 64.2-160.7 160.2-188 270.5-7.2 27.9-22.3 53.6-42.6 72.4-22.3 20.7-48.7 31.6-76.5 31.6z m271.4-544.7c-21.8 0-45.1 7.5-65.9 21.7C333 268.3 240.3 401.7 202.4 555c-8.6 34.6-2.8 69.1 15.3 92.3 11 14 25.1 21.8 39.8 21.8h0.5c43.8 0 76.9-39.7 87-78.9 29.2-118.1 100.7-221 201.3-289.7 33.3-23.2 59-68.2 43.4-109.3-5.2-13.8-17.3-24.4-34.3-29.7-8.3-2.7-17.1-4-26.1-4z" fill="#232323" p-id="13127"></path></svg>小吃精选</h4></a>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane active" id="id7">
+                <div class="container" style="background-color: antiquewhite; text-align: center;">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/83.jpg" title="红糖饼"><img src="image/83.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/83.jpg" title="红糖饼">红糖饼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/84.jpg" title="酸菜肉丁蛋炒饭"><img src="image/84.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/84.jpg" title="酸菜肉丁蛋炒饭">酸菜肉丁蛋炒饭</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/85.jpg" title="蕃茄酸辣米粉"><img src="image/85.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/85.jpg" title="蕃茄酸辣米粉">蕃茄酸辣米粉</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/86.jpg" title="手工素臊子面"><img src="image/86.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/86.jpg" title="手工素臊子面">手工素臊子面</a></center></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/87.jpg" title="家常炒米粉"><img src="image/87.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/87.jpg" title="家常炒米粉">家常炒米粉</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/88.jpg" title="鸡胸肉拌荞麦面"><img src="image/88.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/88.jpg" title="鸡胸肉拌荞麦面">鸡胸肉拌荞麦面</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/89.jpg" title="南瓜花卷"><img src="image/89.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/89.jpg" title="南瓜花卷">南瓜花卷</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/90.jpg" title="红烧牛肉面"><img src="image/90.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/90.jpg" title="红烧牛肉面">红烧牛肉面</a></center></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="id8">
+                <div class="container" style="background-color: antiquewhite; text-align: center;">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/91.jpg" title="鸭血粉丝羊肉汤"><img src="image/91.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/91.jpg" title="鸭血粉丝羊肉汤">鸭血粉丝羊肉汤</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/92.jpg" title="红薯芝士球"><img src="image/92.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/92.jpg" title="红薯芝士球">红薯芝士球</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/93.jpg" title="舒芙蕾厚松饼"><img src="image/93.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/93.jpg" title="舒芙蕾厚松饼">舒芙蕾厚松饼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/94.jpg" title="养生红糖发糕"><img src="image/94.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/94.jpg" title="养生红糖发糕">养生红糖发糕</a></center></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/95.jpg" title="空心油条"><img src="image/95.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/95.jpg" title="空心油条">空心油条</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/96.jpg" title="山楂雪球"><img src="image/96.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/96.jpg" title="山楂雪球">山楂雪球</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/97.jpg" title="奶香烤饼"><img src="image/97.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/97.jpg" title="奶香烤饼">奶香烤饼</a></center></h5>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div style="overflow: hidden;"><a href="image/98.jpg" title="琥珀核桃仁"><img src="image/98.jpg" alt="" class="img-fluid"></a></div>
+                            <h5><center><a href="image/98.jpg" title="琥珀核桃仁">琥珀核桃仁</a></center></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10"></div>
+            <div class="col-xl-2">
+                <div class="fixed-bottom div2" style="margin-left: 85%; margin-bottom: 5%;"><a href="#top" target="_self" title="返回顶部" style="display: inline;"><img src="image/145.png" alt="" class="img-fluid" id="img12" style="height: 108px; width: 108px;"></a></div>
+                <!-- target="_self"表示链接会在当前窗口或框架中打开，也就是在点击链接时当前页面会被替换为链接的目标页面。 -->
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10">
+                <div class="row">
+                    <div class="col-12">
+                        <p><a href="#" class="a9" title="美食天下-让吃更美好！"><b>美食天下-让吃更美好！</b></a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <a href="#" class="a2" title="菜谱">菜谱</a>
+                            <a href="#" class="a2" title="食材">食材</a>
+                            <a href="#" class="a2" title="专题">专题</a>
+                            <a href="#" class="a2" title="关于我们">关于我们</a>
+                            <a href="#" class="a2" title="联系我们">联系我们</a>
+                            <a href="#" class="a2" title="服务声明">服务声明</a>
+                            <a href="#" class="a2" title="友情链接">友情链接</a>
+                            <a href="#" class="a2" title="网站地图">网站地图</a>
+                            <a href="#" class="a2" title="客户端">客户端</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-12">
+                    <p>
+                        <b>友情链接：</b>
+                        <a href="#" class="a2" title="愉悦妈妈">愉悦妈妈</a>
+                        <a href="#" class="a2" title="自游乐">自游乐</a>
+                        <a href="#" class="a2" title="中华美食网">中华美食网</a>
+                        <a href="#" class="a2" title="太平洋亲子网">太平洋亲子网</a>
+                        <a href="#" class="a2" title="亲宝网">亲宝网</a>
+                        <a href="#" class="a2" title="中国地图">中国地图</a>
+                        <a href="#" class="a2" title="民福康健康">民福康健康</a>
+                        <a href="#" class="a2" title="波奇网">波奇网</a>
+                        <a href="#" class="a2" title="餐饮杰">餐饮杰</a>
+                    </p>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            版权所有 © 2004-2023 北京盛世传越科技有限公司 保留所有权利
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                    <p>
+                        <a href="#" class="a2" title="京ICP证090244号">京ICP证090244号</a>
+                        <a href="#" class="a2" title="京ICP备10020153号-1">京ICP备10020153号-1</a>
+                        <img src="image/143.png" alt="" id="img10" class="img-fluid" style="height: 16px; width: 20px;">
+                        <a href="#" class="a2" title="京公网安备11010502031041号">京公网安备11010502031041号</a>
+                        <a href="#" class="a2" title="中国互联网举报中心">中国互联网举报中心</a>
+                        电话:12377/
+                    </p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                        <a href="#" class="a2" title="证照中心">证照中心</a>
+                        <a href="#" class="a2" title="中国地图">中国地图</a>
+                        <a href="#" class="a2" title="民福康健康">民福康健康</a>
+                        <a href="#" class="a2" title="波奇网">波奇网</a>
+                        <a href="#" class="a2" title="餐饮杰">餐饮杰</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2">
+                <div><a href="#" title="美食天下"><img src="image/144.png" id="img11" alt="" class="img-fluid"></a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function dl() {
+            // 模拟登录过程，这里可以替换为实际的登录逻辑
+            // 假设登录成功
+            var loggedIn = true;
+            if (loggedIn) {
+            alert('登录成功！');
+            } else {
+            alert('登录失败，请重试。');
+            }
+        }
+        function zc() {
+            // 模拟注册过程，这里可以替换为实际的注册逻辑
+            // 假设注册成功
+            var loggedIn = true;
+            if (loggedIn) {
+            alert('注册成功！');
+            } else {
+            alert('注册失败，请重试。');
+            }
+        }
+        </script>
+</body>
+</html>

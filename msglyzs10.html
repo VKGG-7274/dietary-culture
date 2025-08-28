@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/top.css">
+    <style>
+        .div1 a:hover img{filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8} 
+        /* filter:alpha(Opacity=80);: 这是IE浏览器下的透明度设置，用于控制元素的透明度。在这里，filter:alpha(Opacity=80);表示将图片的透明度设置为80%。*/
+        /* -moz-opacity:0.8;: 这是针对Firefox浏览器的透明度设置，同样用于控制元素的透明度。在这里，-moz-opacity:0.8;也表示将图片的透明度设置为80%。 */
+        /* opacity: 0.8: 这是CSS3中的透明度设置，同样用于控制元素的透明度。在这里，opacity: 0.8表示将图片的透明度设置为80%。 */
+        .a9{
+            color: orangered;
+        }
+        .a9:hover{
+            color: orangered;
+            text-decoration: none;
+        }
+        .a2{
+            color: #333;
+        }
+        .a2:hover{
+            color: orange;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(245, 160, 176);
+            text-decoration: none;
+        }
+        .a1{
+            color: crimson;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+        div{
+            overflow: hidden;
+        }
+        #logo{
+            transform: scale(1);
+            
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        #img1:hover{
+            transform: scale(1);
+        }
+        #img2:hover{
+            transform: scale(1);
+        }
+        #img3:hover{
+            transform: scale(1);
+        }
+        h2{
+            color: crimson;
+        }
+        a{
+            color: #333;
+        }
+        .list-inline-item{
+            margin: 23px;
+        }
+        @font-face {
+            /*  @font-face一种规则 */
+            font-family: katong;
+            /* font-family: katong;定义字体名称 */
+            src: url(font/QianTuXiaoTuTi-2.ttf);
+        }
+        /* 自定义字体 */
+        @font-face {
+            font-family: kaiti;
+            src: url(font/HanYiKaiTiJian-1.ttf);
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; height: 50px; background-color: rgb(189, 11, 11); " class="fixed-top"></div>
+    <div class="container">
+        <!-- 导航栏 -->
+        <div class="row navbar navbar-expand-lg  navbar-light fixed-top" id="row">
+            <div class="col-lg-3 bavber-brand">
+                <img src="image/logo1.jpg" class="img-fluid" style="width: auto; height: auto;" id="logo">
+            </div>
+            <button class="navbar-toggler" data-target="#my" data-toggle="collapse" style="margin-bottom: 20px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-lg-6 collapse navbar-collapse" id="my">
+                <nav class="nav nav-pills navbar-nav">
+                    <!-- active-点击会变成红色 -->
+                    <a href="index.html" class="nav-item nav-link " id="a">首页</a>
+                    <a href="main display.html" class="nav-item nav-link" id="a">打卡展示</a>
+                    <a href="other display.html" class="nav-item nav-link" id="a">视觉盛宴</a>
+                    <a href="festivals_food.html" class="nav-item nav-link" id="a">节日饮食</a>
+                    <a href="good_food.html" class="nav-item nav-link" id="a">健康美食</a>
+                    <a href="msglyzs2.html" class="nav-item nav-link active" id="a">美食天下</a>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger" id="s1">搜索</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="container" id="top" style="margin-top: 230px;">
+        <div class="row">
+            <div class="col-xl-12" style="text-align: center; background-color:rgb(197, 31, 31)">
+                 <h1 style="font-family: katong;color: white;font-size: 108px;">美食天下</h1>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701662451341" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4727"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="4728"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="4729"></path></svg>2023，大展宏图<span style="font-size: 16px;margin-left: 12px;">祝大家2023兔年 —— 阳没兔起，大展宏图！</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/99.jpg" title="卡通兔子馒头"><img src="image/99.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/99.jpg" title="卡通兔子馒头">卡通兔子馒头</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/100.jpg" title="小兔子香肠馒头"><img src="image/100.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/100.jpg" title="小兔子香肠馒头">小兔子香肠馒头</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/101.jpg" title="玉兔迎春"><img src="image/101.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/101.jpg" title="玉兔迎春">玉兔迎春</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/102.jpg" title="玉兔烧果子"><img src="image/102.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/102.jpg" title="玉兔烧果子">玉兔烧果子</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>红红火火<span style="font-size: 16px;margin-left: 12px;">年夜饭里怎能缺了一片红？</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;" 
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/103.jpg" title="红烧肉"><img src="image/103.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/103.jpg" title="红烧肉">红烧肉</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/104.jpg" title="水煮肉片"><img src="image/104.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/104.jpg" title="水煮肉片">水煮肉片</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/105.jpg" title="毛血旺"><img src="image/105.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/105.jpg" title="毛血旺">毛血旺</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/106.jpg" title="麻辣香锅"><img src="image/106.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/106.jpg" title="麻辣香锅">麻辣香锅</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>大吉大利<span style="font-size: 16px;margin-left: 12px;">年夜饭必备鸡肉菜</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/107.jpg" title="香酥锤子鸡腿"><img src="image/107.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/107.jpg" title="香酥锤子鸡腿">香酥锤子鸡腿</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/108.jpg" title="白斩鸡"><img src="image/108.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/108.jpg" title="白斩鸡">白斩鸡</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/109.jpg" title="辣子鸡"><img src="image/109.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/109.jpg" title="辣子鸡">辣子鸡</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/110.jpg" title="蜜汁烤全鸡"><img src="image/110.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/110.jpg" title="蜜汁烤全鸡">蜜汁烤全鸡</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>年年有余<span style="font-size: 16px;margin-left: 12px;">年夜饭的菜单上怎么能缺少鱼呢？</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/111.jpg" title="剁椒鱼头"><img src="image/111.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/111.jpg" title="剁椒鱼头">剁椒鱼头</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/112.jpg" title="孔雀开屏鱼"><img src="image/112.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/112.jpg" title="孔雀开屏鱼">孔雀开屏鱼</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/113.jpg" title="水煮鱼片"><img src="image/113.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/113.jpg" title="水煮鱼片">水煮鱼片</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/114.jpg" title="花开富贵牡丹鱼片"><img src="image/114.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/114.jpg" title="花开富贵牡丹鱼片">花开富贵牡丹鱼片</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>招财进宝<span style="font-size: 16px;margin-left: 12px;">希望所有朋友财源滚滚，招财进宝</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="imae/115.jpg" title="腰缠万贯"><img src="image/115.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/115.jpg" title="腰缠万贯">腰缠万贯</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/116.jpg" title="佛手百财"><img src="image/116.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/116.jpg" title="佛手百财">佛手百财</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/117.jpg" title="招财就手"><img src="image/117.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/117.jpg" title="招财就手">招财就手</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/118.jpg" title="金元宝馒头"><img src="image/118.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/118.jpg" title="金元宝馒头">金元宝馒头</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>贺岁主食<span style="font-size: 16px;margin-left: 12px;">必不可少的重头戏，是不是很喜庆？</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/119.jpg" title="蒜蓉粉丝蒸扇贝肉"><img src="image/119.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/119.jpg" title="蒜蓉粉丝蒸扇贝肉">蒜蓉粉丝蒸扇贝肉</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/120.jpg" title="海参蒸蛋"><img src="image/120.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/120.jpg" title="海参蒸蛋">海参蒸蛋</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/121.jpg" title="虾仁蒸蛋"><img src="image/121.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/121.jpg" title="虾仁蒸蛋">虾仁蒸蛋</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/122.jpg" title="胡萝卜山药蒸肉饼"><img src="image/122.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/122.jpg" title="胡萝卜山药蒸肉饼">胡萝卜山药蒸肉饼</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-8">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>贺岁主食<span style="font-size: 16px;margin-left: 12px;">必不可少的重头戏，是不是很喜庆？</span></h2>
+            </div>
+            <div class="col-xl-4">
+                <h5 style="text-align: right;"><a href="#" class="a1">查看更多<svg t="1701850465862" class="icon" style="height: 26px; width:38px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10270"><path d="M550.4 490.666667L230.4 170.666667 170.666667 230.4l260.266666 260.266667L170.666667 750.933333 230.4 810.666667l320-320z m298.666667 0L533.333333 170.666667 469.333333 230.4l260.266667 260.266667-260.266667 260.266666 59.733334 59.733334 320-320z" fill="#d81e06" p-id="10271"></path></svg></a></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/123.jpg" title="糯米饭"><img src="image/123.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/123.jpg" title="糯米饭">糯米饭</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/124.jpg" title="金元宝饺子"><img src="image/124.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/124.jpg" title="金元宝饺子">金元宝饺子</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/125.jpg" title="四喜蒸饺"><img src="image/125.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/125.jpg" title="四喜蒸饺">四喜蒸饺</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/126.jpg" title="金元宝馒头"><img src="image/126.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/126.jpg" title="金元宝馒头">金元宝馒头</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-12">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>春节习俗</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="list-inline" style="margin-bottom: 0px;">
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊八节吃什么</a></h4></li>
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十三，祭灶庆小年</a></h4></li>
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十四，扫房迎春</a></h4></li>
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十五，推磨做豆腐</a></h4></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="list-inline">
+                    <!-- class="list-inline"把所有的列表项放在单独的一行 -->
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊八节吃什么</a></h4></li>
+                    <!-- class="list-inline-item"列表项 -->
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十三，祭灶庆小年</a></h4></li>
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十四，扫房迎春</a></h4></li>
+                    <li class="list-inline-item"><h4 style="font-family: kaiti;"><a href="#">腊月二十五，推磨做豆腐</a></h4></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-12">
+                <h2><svg t="1701846344674" class="icon" style="height: 53px; width:46px; margin-right:6px;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5166"><path d="M491.880777 970.394105c-237.529835 0-430.759721-193.240119-430.759721-430.759721 0-237.529835 193.229886-430.769954 430.759721-430.769954s430.759721 193.240119 430.759721 430.769954C922.640498 777.153986 729.410612 970.394105 491.880777 970.394105zM491.880777 169.213913c-204.250894 0-370.410238 166.168554-370.410238 370.419448 0 204.240661 166.159344 370.410238 370.410238 370.410238S862.289991 743.875045 862.289991 539.634384C862.289991 335.38349 696.131671 169.213913 491.880777 169.213913z" fill="#d81e06" p-id="5167"></path><path d="M491.880777 724.720799c-102.056374 0-185.096648-83.030042-185.096648-185.087439s83.040275-185.087439 185.096648-185.087439 185.077206 83.030042 185.077206 185.087439S593.937151 724.720799 491.880777 724.720799zM491.880777 414.897452c-68.777433 0-124.747165 55.959499-124.747165 124.736932s55.968709 124.736932 124.747165 124.736932S616.607476 608.411817 616.607476 539.634384 560.65821 414.897452 491.880777 414.897452z" fill="#d81e06" p-id="5168"></path></svg>更多年夜饭(吉祥菜)的做法</h2>
+            </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/127.jpg" title="广东年夜饭菜谱大全"><img src="image/127.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/127.jpg" title="广东年夜饭菜谱大全">广东年夜饭菜谱大全</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/128.jpg" title="上海年夜饭菜谱大全"><img src="image/128.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/128.jpg" title="上海年夜饭菜谱大全">上海年夜饭菜谱大全</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/129.jpg" title="西北地区年夜饭菜谱"><img src="image/129.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/129.jpg" title="西北地区年夜饭菜谱">西北地区年夜饭菜谱</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/130.jpg" title="华南年夜饭菜谱"><img src="image/130.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/130.jpg" title="华南年夜饭菜谱">华南年夜饭菜谱</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/131.jpg" title="华中年夜饭菜谱"><img src="image/131.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/131.jpg" title="华中年夜饭菜谱">华中年夜饭菜谱</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/132.jpg" title="华东年夜饭菜谱"><img src="image/132.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="img/132.jpg" title="华东年夜饭菜谱">华东年夜饭菜谱</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/133.jpg" title="年夜饭年华素锦"><img src="image/133.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/133.jpg" title="年夜饭年华素锦">年夜饭年华素锦</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/134.jpg" title="年夜饭牛气冲天"><img src="image/134.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/134.jpg" title="年夜饭牛气冲天">年夜饭牛气冲天</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/135.jpg" title="锦绣凉菜"><img src="image/135.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/135.jpg" title="锦绣凉菜">锦绣凉菜</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/136.jpg" title="华北年夜饭菜谱"><img src="image/136.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/136.jpg" title="华北年夜饭菜谱">华北年夜饭菜谱</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/137.jpg" title="东北年夜饭菜谱"><img src="image/137.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/137.jpg" title="东北年夜饭菜谱">东北年夜饭菜谱</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/138.jpg" title="西南地区年夜饭菜谱"><img src="image/138.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/138.jpg" title="西南地区年夜饭菜谱">西南地区年夜饭菜谱</a></center></h5>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/139.jpg" title="北京年夜饭菜谱大全"><img src="image/139.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/139.jpg" title="北京年夜饭菜谱大全">北京年夜饭菜谱大全</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/140.jpg" title="花开富贵"><img src="image/140.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/140.jpg" title="花开富贵">花开富贵</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/141.jpg" title="吉运汤煲"><img src="image/141.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="img/141.jpg" title="吉运汤煲">吉运汤煲</a></center></h5>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <div><a href="image/142.jpg" title="生猛海味"><img src="image/142.jpg" alt="" class="img-fluid"></a></div>
+                <h5><center><a href="image/142.jpg" title="生猛海味">生猛海味</a></center></h5>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10"></div>
+            <div class="col-xl-2">
+                <div class="fixed-bottom div1" style="margin-left: 85%; margin-bottom: 5%;"><a href="#top" target="_self" title="返回顶部" style="display: inline;"><img src="image/145.png" alt="" class="img-fluid" id="img3" style="height: 108px; width: 108px;"></a></div>
+            <!-- target="_self"表示链接会在当前窗口或框架中打开，也就是在点击链接时当前页面会被替换为链接的目标页面。 -->
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10">
+                <div class="row">
+                    <div class="col-12">
+                        <br>
+                        <br>
+                        <p><a href="#" class="a9"><b>美食天下-让吃更美好！</b></a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <a href="#" class="a2" title="菜谱">菜谱</a>
+                            <a href="#" class="a2" title="食材">食材</a>
+                            <a href="#" class="a2" title="专题">专题</a>
+                            <a href="#" class="a2" title="关于我们">关于我们</a>
+                            <a href="#" class="a2" title="联系我们">联系我们</a>
+                            <a href="#" class="a2" title="网站地图">网站地图</a>
+                            <a href="#" class="a2" title="客户端">客户端</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            版权所有 © 2004-2023 
+                            <a href="#" title="美食天下" class="a2">美食天下</a>
+                            保留所有权利 - 
+                            <img src="image/143.png" alt="" class="img-fluid" style="height: 16px; width: 20px;" id="img2">
+                            <a href="#" title="京公网安备 11010502031041号" class="a2">京公网安备 11010502031041号</a>
+                            /京ICP证090244号/
+                            京ICP备10020153号-1
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2">
+                <div><a href="#" title="美食天下"><img src="image/144.png" alt="" class="img-fluid" id="img1"></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

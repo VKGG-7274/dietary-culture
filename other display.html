@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其它美食介绍</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/top.css">
+</head>
+<style>
+        @font-face {
+        font-family: a;
+        src: url(font/hanyiyoukaijianti.ttf);
+    }
+
+    p {
+        font-family: a;
+        color: black;
+    }
+
+    @font-face {
+        font-family: b;
+        src: url(font/sanjijinyixingkaiti.ttf);
+    }
+
+    h4 {
+        font-family: b;
+        color: black;
+    }
+
+    a{
+        font-family: b;
+        color:white;
+        font-size:larger;
+    }
+
+</style>
+<body>
+
+    <div style="width: 100%; height: 50px; background-color: rgb(189, 11, 11); " class="fixed-top"></div>
+    <div class="container">
+        <!-- 导航栏 -->
+        <div class="row navbar navbar-expand-lg  navbar-light fixed-top" id="row">
+            <div class="col-lg-3 bavber-brand">
+                <img src="image/logo1.jpg" class="img-fluid" id="logo">
+            </div>
+            <button class="navbar-toggler" data-target="#my" data-toggle="collapse" style="margin-bottom: 20px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-lg-6 collapse navbar-collapse" id="my">
+                <nav class="nav nav-pills navbar-nav">
+                    <!-- active-点击会变成红色 -->
+                    <a href="index.html" class="nav-item nav-link" id="a">首页</a>
+                    <a href="main display.html" class="nav-item nav-link" id="a">打卡展示</a>
+                    <a href="other display.html" class="nav-item nav-link active" id="a">视觉盛宴</a>
+                    <a href="festivals_food.html" class="nav-item nav-link" id="a">节日饮食</a>
+                    <a href="good_food.html" class="nav-item nav-link" id="a">健康美食</a>
+                    <a href="msglyzs2.html" class="nav-item nav-link" id="a">美食天下</a>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 内容 -->
+    <div class="container" style="margin-top: 182px;">
+        <div class="row">
+            <div class="col-md-12" style="background-color: sandybrown;">
+            <h4 class="text-center display-2">一起来享受视觉盛宴！</h4>
+    </div>
+        </div>
+        <div class="row" style="background-color: antiquewhite;">
+            <div class="col-md-4 border border-info">
+                <img src="image/Peking duck.png" class="img-fluid img-thumbnail">
+                <h4 class="text-center">北京烤鸭</h4>
+                <p class="lead">
+                    北京烤鸭是具有世界声誉的北京著名菜，起源于中国南北朝时期，《食珍录》中已记有炙鸭，
+                    在当时是宫廷名菜。用料为优质肉食鸭，果木炭火烤制，色泽红润，肉质肥而不腻，外脆里嫩。
+                </p>
+                <div class="dropdown" style="text-align: center;">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                      查看景点介绍
+                    </button>
+                    <div class="dropdown-menu">
+                      <span class="dropdown-item-text">
+                        <img src="image/Wangfujing.jpeg" class="img-fluid img-thumbnail">
+                        <h4 class="text-center">王府井</h4>
+                        <div class="dropdown-divider"></div>
+                        <p class="lead">
+                            王府井大街（Wangfujing Street）位于中国北京市东城区，是北京著名的老字号商业区，拥有悠久的历史和文化底蕴。
+                            在这里，您可以尽情购物、品味美食、体验传统文化，感受北京的魅力。
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+            <div class="col-md-4 border border-info">
+                <img src="image/Duck blood and bean-starchy vermicelli soup.jpg" class="img-fluid img-thumbnail">
+                <h4 class="text-center">鸭血粉丝汤</h4>
+                <p class="lead">
+                    鸭血粉丝汤是南京的传统名小吃之一，以鸭血和粉丝为主要原料，配以鲜美的汤汁煮制而成。
+                    鸭血的口感鲜嫩，粉丝的口感滑爽，汤汁鲜美可口，是南京人喜爱的暖胃佳品。
+                </p>
+                <br>
+            <div class="dropdown" style="text-align: center;">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    查看景点介绍
+                </button>
+                <div class="dropdown-menu">
+                  <span class="dropdown-item-text">
+                    <img src="image/The Confucius Temple.jpeg" class="img-fluid img-thumbnail">
+                    <h4 class="text-center">夫子庙</h4>
+                    <div class="dropdown-divider"></div>
+                    <p class="lead">
+                        南京夫子庙位于南京市秦淮区秦淮河北岸贡院街、江南贡院以西，地处夫子庙秦淮风光带核心区，是中国最大的传统古街市，
+                        与上海城隍庙、苏州玄妙观和北京天桥为中国四大闹市，也是中国著名的开放式国家AAAAA级旅游景区和国际旅游胜地。
+                    </p>
+                  </span>
+                </div>
+              </div>
+              <br>
+            </div>
+            <div class="col-md-4 border border-info">
+                <img src="image/pancake rolled with crisp fritter.png" class="img-fluid img-thumbnail">
+                <h4 class="text-center">煎饼果子</h4>
+                <p class="lead">
+                    煎饼果子，是中国天津的著名小吃，天津人通常以它为早点。
+                    煎饼果子根据不同产地拥有不同面糊的做法，由面糊薄饼、鸡蛋、还有油条或者馃子(薄脆)组成，
+                    配以面酱、葱末、腐乳、辣椒酱作为佐料。
+                </p>
+                <div class="dropdown" style="text-align: center;">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        查看景点介绍
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <span class="dropdown-item-text">
+                        <img src="image/Ferris wheel.jpg" class="img-fluid img-thumbnail">
+                        <h4 class="text-center">“天津之眼”摩天轮</h4>
+                        <div class="dropdown-divider"></div>
+                        <p class="lead">
+                            “天津之眼”摩天轮（The Tientsin Eye Ferris wheel），
+                            位于天津市河北区李公祠大街与五马路交口的永乐桥上，跨海河连接河北区与红桥区，
+                            是一座跨河建设、桥轮合一的摩天轮，兼具观光和交通功用，是天津地标之一。
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+        </div>
+        <div class="row" style="background-color: antiquewhite;">
+            <div class="col-md-4 border border-info">
+                <img src="image/West Lake Fish in Vinegar Sauce.jpeg" class="img-fluid img-thumbnail">
+                <h4 class="text-center">西湖醋鱼</h4>
+                <p class="lead">
+                    西湖醋鱼（West Lake Fish in Vinegar Gravy），又名“叔嫂传珍”“宋嫂鱼”，前身为“宋嫂鱼羹”，
+                    是中国浙江省杭州市传统风味名菜，为浙江菜系。
+                    西湖醋鱼主以草鱼等食材用料烹制，色泽红亮，肉质鲜嫩，酸甜清香，口感软嫩，带有蟹味。
+                </p>
+                <br>
+                <div class="dropdown" style="text-align: center;">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        查看景点介绍
+                    </button>
+                    <div class="dropdown-menu">
+                      <span class="dropdown-item-text">
+                        <img src="image/West Lake.jpg" class="img-fluid img-thumbnail">
+                        <h4 class="text-center">西湖</h4>
+                        <div class="dropdown-divider"></div>
+                        <p class="lead">
+                            西湖，又名钱塘湖，位于中国浙江省杭州市西湖区龙井路1号，杭州市区西部，湖面面积为6.38平方千米。
+                            杭州西湖风景名胜区主要景点122处，其中有特级景点26处，一级景点25处，二级景点39处，三级景点21处，四级景点11处；
+                            有国家重点文物保护单位5处，省级文物保护单位35处，市级文物保护单位25处，还有39处文物保护点和各类专题博物馆点缀其中。
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+            <div class="col-md-4 border border-info">
+                <img src="image/Hot dry noodles.png" class="img-fluid img-thumbnail">
+                <h4 class="text-center">热干面</h4>
+                <p class="lead">
+                    热干面（Hot dry noodles）是武汉最出名的小吃之一，有多种做法，其采用碱水面，
+                    并以食油、芝麻酱、色拉油、香油、红油、细香葱、大蒜、萝卜丁、酸豆角、卤水汁、生抽、醋等为辅助材料。
+                    热干面色泽黄而油润，味道鲜美，由于热量高，也可以当作主食，营养早餐，补充人体所需的能量。
+                </p>
+                <div class="dropdown" style="text-align: center;">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        查看景点介绍
+                    </button>
+                    <div class="dropdown-menu">
+                      <span class="dropdown-item-text">
+                        <img src="image/Yellow Crane Tower.jpg" class="img-fluid img-thumbnail">
+                        <h4 class="text-center">黄鹤楼</h4>
+                        <div class="dropdown-divider"></div>
+                        <p class="lead">
+                            黄鹤楼，位于湖北省武汉市武昌区，地处蛇山之巅，濒临万里长江，为武汉市地标建筑；
+                            与湖南岳阳岳阳楼、江西南昌滕王阁并称为“江南三大名楼”，
+                            是“武汉十大景”之首、“中国古代四大名楼”之一、“中国十大历史文化名楼”之一，世称"天下江山第一楼"。
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+            <div class="col-md-4 border border-info">
+                <img src="image/Noodles with Satay Sauce.jpeg" class="img-fluid img-thumbnail">
+                <h4 class="text-center">沙茶面</h4>
+                <p class="lead">
+                    沙茶面是厦门人最常见最平常的小吃之一。无论清晨或黄昏，到处都可以看到卖沙茶面的小店。
+                    沙茶面的妙处是汤头很鲜美，加上自选加料，比如瘦肉、鱼丸、鱿鱼等，口感丰富，味道独特。
+                    沙茶面最好趁热浇入浓稠的沙茶酱，让味道更加浓郁。沙茶面最好趁热吃，因为热食的味道更加鲜美。
+                </p>
+                <div class="dropdown" style="text-align: center;">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        查看景点介绍
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <span class="dropdown-item-text">
+                        <img src="image/Gulangyu Islet.jpeg" class="img-fluid img-thumbnail">
+                        <h4 class="text-center">鼓浪屿</h4>
+                        <div class="dropdown-divider"></div>
+                        <p class="lead">
+                            鼓浪屿，原名“圆沙洲”，别名“圆洲仔”，位于福建省厦门市思明区鼓浪屿街道，面积1.88平方公里。
+                            鼓浪屿岛上海礁嶙峋，岸线迤逦，山峦叠翠，峰岩跌宕，鼓浪屿以建筑为表，音乐为魂。
+                            随着厦门的发展，鼓浪屿成为观光、度假、旅游、购物、休闲、娱乐为一体的综合性海岛风景文化旅游区。
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-white">
+        <div class="col-md-12 text-black"><center>Copyright&copy;Oliver</center></div>
+        <br>
+        <br>
+        </div>
+</body>
+</html>
